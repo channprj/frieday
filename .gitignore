@@ -14,3 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore specific config files.
+config/database.yml
+config/google_analytics.yml
+
+# Ignore all assets files
+.DS_Store
+public/assets/**
