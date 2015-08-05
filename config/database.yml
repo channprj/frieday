@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: frieday
-  password: 
+  password: gmlcks
   socket: /var/run/mysqld/mysqld.sock
 
 development:
