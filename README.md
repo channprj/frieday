@@ -7,16 +7,14 @@
 <br />
 ----
 <br />
+
 ##팀 내의 활동정보 공유
-* [박희찬 블로그 : blog.chann.kr](http://blog.chann.kr)
-* [박예은 블로그 : blog.naver.com/hello_eun11](http://blog.naver.com/hello_eun11)
-<br />
-----
-<br />
-* Server : Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-32-generic x86_64)
+* [박희찬 블로그(blog.chann.kr)](http://blog.chann.kr)<br />
+* [박예은 블로그(blog.naver.com/hello_eun11)](http://blog.naver.com/hello_eun11)
 
+<br />
+##개발 환경
+* Server : Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-32-generic x86_64) on [Toast Cloud](http://cloud.toast.com)
 * Ruby version : 2.1.2p95 (2014-05-08 revision 45877)
-
 * Rails version : 4.1.1
-
 * Database : Ver 15.1 Distrib 5.5.44-MariaDB, using readline 5.2
