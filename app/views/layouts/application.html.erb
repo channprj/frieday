@@ -25,8 +25,8 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Posts", "#" %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Posts", posts_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
@@ -49,14 +49,6 @@
   <%= render partial: "shared/flash_messages", flash: flash %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-  <% if user_signed_in? %>
-    <p>현재 로그인된 유저의 이메일 : <%= current_user.email %></p>
-    <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></p>
-  <% else %>
-    <p><%= link_to "로그인", new_user_session_path %></p>
-  <% end %>
-
   <%= yield %>
 </div><!--/container-->
 </body>

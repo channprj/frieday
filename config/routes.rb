@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :bulletins
+
+  resources :posts
+
   devise_for :users
   root 'welcome#index'
   #  get 'welcome/index'
