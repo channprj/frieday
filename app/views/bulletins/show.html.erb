@@ -13,6 +13,10 @@
   <th>Created at</th>
   <td><%= @bulletin.created_at %></td>
 </tr>
+<tr>
+  <th>Post Type</th>
+  <td><%= @bulletin.post_type %></td>
+</tr>
 </table>
 
 <%= link_to 'Edit', edit_bulletin_path(@bulletin), class: 'btn btn-default' %>

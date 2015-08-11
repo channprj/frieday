@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  resources :bulletins
-
-  resources :posts
+  # 게시판에서 posts 객체를 불러옴
+  resources :bulletins do
+    resources :posts
+  end
 
   devise_for :users
+
   root 'welcome#index'
-  #  get 'welcome/index'
 
   resources :tasks
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

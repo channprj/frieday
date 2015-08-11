@@ -41,7 +41,7 @@ class BulletinsController < ApplicationController
       @bulletin = Bulletin.find(params[:id])
     end
 
-    def bulletin_params
-      params.require(:bulletin).permit(:title, :description)
-    end
+  def bulletin_params
+    params.require(:bulletin).permit(:title, :description, :post_type)
+  end
 end

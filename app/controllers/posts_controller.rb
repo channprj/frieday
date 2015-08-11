@@ -1,44 +1,63 @@
 class PostsController < ApplicationController
+
+  before_action :set_bulletin
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  respond_to :html
-
   def index
-    @posts = Post.all
-    respond_with(@posts)
+    @posts = @bulletin.posts.all
   end
 
   def show
-    respond_with(@post)
   end
 
   def new
-    @post = Post.new
-    respond_with(@post)
+    @post = @bulletin.posts.new
   end
 
   def edit
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.save
-    respond_with(@post)
+    @post = @bulletin.posts.new(post_params)
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to [@post.bulletin, @post], notice: '포스트를 작성했어요! :D' }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
-    @post.update(post_params)
-    respond_with(@post)
+    respond_to do |format|
+      if @post.update(post_params)
+        format.html { redirect_to [@post.bulletin, @post], notice: '포스트를 업데이트 했어요. :-)' }
+        format.json { render :show, status: :ok, location: @post }
+      else
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
     @post.destroy
-    respond_with(@post)
+    respond_to do |format|
+      format.html { redirect_to bulletin_posts_url, notice: '포스트를 삭제했어요. :-(' }
+      format.json { head :no_content }
+    end
   end
 
   private
+    def set_bulletin
+      @bulletin = Bulletin.find(params[:bulletin_id])
+    end
+
     def set_post
-      @post = Post.find(params[:id])
+      @post = @bulletin.posts.find(params[:id])
     end
 
     def post_params
