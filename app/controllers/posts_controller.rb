@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to [@post.bulletin, @post], notice: '포스트를 작성했어요! :D' }
+        format.html { redirect_to [@post.bulletin, @post], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to [@post.bulletin, @post], notice: '포스트를 업데이트 했어요. :-)' }
+        format.html { redirect_to [@post.bulletin, @post], notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to bulletin_posts_url, notice: '포스트를 삭제했어요. :-(' }
+      format.html { redirect_to bulletin_posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -61,6 +61,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :picture, :picture_cache)
     end
 end

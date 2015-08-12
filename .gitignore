@@ -22,3 +22,5 @@ config/google_analytics.yml
 # Ignore all assets files
 .DS_Store
 public/assets/**
+public/uploads/*
+

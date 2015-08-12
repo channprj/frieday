@@ -27,6 +27,7 @@
       <ul class="nav navbar-nav">
         <!-- <li><%= link_to "Home", root_path %></li> -->
         <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('5') %></li>
+        <li class="<%= params[:bulletin_id] == '6' ? 'active' : '' %>"><%= link_to '치느님 자랑', bulletin_posts_path(6) %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
@@ -48,7 +49,7 @@
 <div class="container">
   <%= render partial: "shared/flash_messages", flash: flash %>
   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <!-- <p class="alert"><%= alert %></p> -->
   <%= yield %>
 </div><!--/container-->
 </body>

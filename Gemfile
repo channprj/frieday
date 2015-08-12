@@ -53,3 +53,8 @@ gem 'letter_opener', group: :development  # lookup email on browser without send
 # Front-end
 gem 'bootstrap-sass'  # Bootstrap with SASS.
 gem 'simple_form'  # Make form simple.
+gem "font-awesome-rails"  # Use Font-awesome resources.
+
+# Back-end
+gem 'carrierwave'  # Upload image.
+gem 'mini_magick'  # Resize image.

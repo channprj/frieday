@@ -2,14 +2,15 @@ $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 $navbar-default-bg: red;
 $navbar-default-link-color: white;
-$navbar-default-link-active-color: $light-orange;
+$navbar-default-link-active-color: white;
 $navbar-default-link-hover-color: white;
-$navbar-default-link-hover-bg: white;
+$navbar-default-link-hover-bg: #cc0000;
 $gray-light: #cccccc;
 
 @import 'bootstrap';
 @import 'bootstrap/theme';
-@import 'posts.css.scss';
+@import 'posts';
+@import 'font-awesome';
 
 
 body { padding-top: 60px; }
