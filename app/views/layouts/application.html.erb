@@ -26,8 +26,8 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <!-- <li><%= link_to "Home", root_path %></li> -->
-        <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('5') %></li>
-        <li class="<%= params[:bulletin_id] == '6' ? 'active' : '' %>"><%= link_to '치느님 자랑', bulletin_posts_path(6) %></li>
+        <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
+        <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '치느님 자랑', bulletin_posts_path(2) %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>

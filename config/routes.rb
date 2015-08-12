@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+
   # 게시판에서 posts 객체를 불러옴
   resources :bulletins do
     resources :posts
