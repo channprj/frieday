@@ -1,0 +1,30 @@
+///////////////////////////
+// Overriding Bootstrap  //
+///////////////////////////
+/*--------------------------------------------------------------
+  Mobile GNB
+--------------------------------------------------------------*/
+.navbar-toggle {
+	float: left;
+	border: none;
+}
+.navbar-default .navbar-toggle {
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+.tracing-toggle {
+	float:right;
+	margin: 0 auto;
+	background-color: transparent;
+	background-image: none;
+	color: white;
+	font-size: 2.4rem;
+	line-height: 2;
+	border: none;
+	float: right;
+}

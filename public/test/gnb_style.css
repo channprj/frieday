@@ -1,4 +1,4 @@
-.screen{
+/*.screen{
   position: relative;
   overflow: hidden;
 }
@@ -7,6 +7,10 @@
   position: relative;
   top: 0;
   width: 100%;
+}
+*/
+body {
+  margin: 0 auto;
 }
 
 .menu{
@@ -29,7 +33,7 @@
 }
 
 /*COSMETIC STUFF*/
-.screen{
+/*.screen{
   width: 420px;
   height: 650px;
   border-radius: 3px;
@@ -39,32 +43,16 @@
   -ms-transition: all ease 0.2s;
   -o-transition: all ease 0.2s;
   transition: all ease 0.2s;
-}
+}*/
 
-.top-bar{
-  background: #5B7F95;
-  background-image: -webkit-linear-gradient(#47738C ,#5B7F95, #3E5E71);
-  background-image: -moz-linear-gradient(#47738C ,#5B7F95, #3E5E71);
-  background-image: -ms-linear-gradient(#47738C ,#5B7F95, #3E5E71);
-  background-image: -o-linear-gradient(#47738C ,#5B7F95, #3E5E71);
-  background-image: linear-gradient(#47738C ,#5B7F95, #3E5E71);
-  height: 50px;
-}
-
-.top-bar span{
-  color: white;
-  float: right;
-  margin: 15px;
-}
-
-.screen-landscape{
+/*.screen-landscape{
   width: 650px;
   height: 420px;
-}
+}*/
 
 .menu{
-  background: #2A2A2A;
-  width: 280px;
+  background: #222;
+  width: 240px;
   -webkit-transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;
   -ms-transition: all ease 0.2s;
@@ -73,11 +61,11 @@
 }
 
 .slide-content{
-  -webkit-transform: translate(280px, 0);
-  -moz-transform: translate(280px, 0);
-  -ms-transform: translate(280px, 0);
-  -o-transform: translate(280px, 0);
-  transform: translate(280px, 0);
+  -webkit-transform: translate(240px, 0);
+  -moz-transform: translate(240px, 0);
+  -ms-transform: translate(240px, 0);
+  -o-transform: translate(240px, 0);
+  transform: translate(240px, 0);
 }
 
 .content{
@@ -90,11 +78,11 @@
   transition: all ease 0.2s;
 }
 
-p{
+/*p{
   margin: 10px 30px;
-}
+}*/
 
-button{
+/*button{
   width: 45px;
   height: 45px;
   color: #C6C6C6;
@@ -116,9 +104,9 @@ button:active{
   background-image: -ms-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
   background-image: -o-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
   background-image: linear-gradient(#3E5E71 ,#5B7F95, #47738C);
-}
+}*/
 
-button:hover, button:focus{
+/*button:hover, button:focus{
   box-shadow: inset 0 0 6px -2px #FFF;
   outline: none;
 }
@@ -143,7 +131,7 @@ li{
 
 li:hover{
   background: #6C6C6C;
-}
+}*/
 
 ::-webkit-scrollbar {
     width: 0;

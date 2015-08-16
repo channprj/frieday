@@ -1,5 +1,6 @@
-$light-orange: #ff8c00;
-$navbar-default-color: $light-orange;
+/*--------------------------------------------------------------
+  Application Layout Style
+--------------------------------------------------------------*/
 $navbar-default-bg: red;
 $navbar-default-link-color: white;
 $navbar-default-link-active-color: white;
@@ -7,10 +8,16 @@ $navbar-default-link-hover-color: white;
 $navbar-default-link-hover-bg: #cc0000;
 $gray-light: #cccccc;
 
-@import 'bootstrap';
-@import 'bootstrap/theme';
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-custom';
+@import 'bootstrap-overrides';
 @import 'posts';
 @import 'font-awesome';
 
-
-body { padding-top: 60px; }
+.navbar-brand > img {
+	height: 20px;
+	width: 100px;
+}
