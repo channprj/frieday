@@ -17,3 +17,10 @@
 //
 // Loads all Bootstrap javascripts
 //= require bootstrap
+
+/* MMenu */
+  $(function() {
+    $('div#menu').mmenu({
+         extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark"]
+      });
+  });

@@ -15,17 +15,128 @@
 <script data-turbolinks-track="true" src="/assets/welcome.js?body=1"></script>
 <script data-turbolinks-track="true" src="/assets/bootstrap.js?body=1"></script>
 <script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
-  <meta content="authenticity_token" name="csrf-param" />
-<meta content="4d0weTLzahDdjQ/GOIBhn/FrUclrQyK7QDhCUAJcgQ0=" name="csrf-token" />
+
+<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mmenu.min.js"></script>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="4CTP0ftFWoQfUVZkkdUDbxiNjoqO+ZnXQfjs0qGqRgI=" name="csrf-token" />
+
+
+<style type="text/css">
+  html, body
+  {
+    padding: 0;
+    margin: 0;
+  }
+  body
+  {
+    background-color: #fff;
+    font-family: Arial, Helvetica, Verdana;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    position: relative;
+    -webkit-text-size-adjust: none;
+  }
+  body *
+  {
+    text-shadow: none;
+  }
+  p
+  {
+    margin: 0 0 10px 0;
+  }
+  a, a:link, a:active, a:visited, a:hover
+  {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  nav:not(.mm-menu)
+  {
+    display: none;
+  }
+
+  .header,
+  .content,
+  .footer
+  {
+    text-align: center;
+  }
+  .header,
+  .footer
+  {
+    background: #222;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    width: 100%;
+    height: 40px;
+    padding: 0 50px;
+  }
+  .header.fixed
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .footer.fixed
+  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .header a
+  {
+    background: center center no-repeat transparent;
+    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .content
+  {
+    padding: 150px 50px 50px 50px;
+}
+</style>
 
 </head>
 <body>
+<div id="page">
 <!-- Fixed navbar -->
-<div id="content" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
 
-    <div class="navbar-header">
-      <button id="openMenu" type="button" class="navbar-toggle" >
+    <div id="menu" class="navbar-header">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About us</a>
+            <ul>
+              <li><a href="#about/history">History</a></li>
+              <li><a href="#">The team</a>
+                <ul>
+                  <li><a href="#about/team/management">Management</a></li>
+                  <li><a href="#about/team/sales">Sales</a></li>
+                  <li><a href="#about/team/development">Development</a></li>
+                </ul>
+              </li>
+              <li><a href="#about/address">Our address</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -59,72 +170,11 @@
   
   <p class="notice"></p>
   <!-- <p class="alert"></p> -->
-  <h2>Preview Bulletin</h2>
+  <h1>Frieday :)</h1>
+<a class="btn btn-default" href="/bulletins/5/posts">글작성</a>
 
-<table class='table table-bordered'>
-<tr>
-  <th>Title</th>
-  <td>Contact Us</td>
-</tr>
-<tr>
-  <th>Description</th>
-  <td></td>
-</tr>
-<tr>
-  <th>Created at</th>
-  <td>2015-08-13 21:49:05 +0900</td>
-</tr>
-<tr>
-  <th>Post Type</th>
-  <td>bulletin</td>
-</tr>
-</table>
-
-<a class="btn btn-default" href="/bulletins/5/edit">Edit</a>
-<a class="btn btn-default" href="/bulletins">Back</a>
 </div><!--/container-->
-<script>
-document.getElementById('openMenu').onclick = function () {
-    document.getElementById('content').classList.toggle('slide-content');
-};
-</script>
+</div>
 </body>
 </html>
 
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<link rel="stylesheet" type="text/css" href="gnb_style.css">
-</head>
-<body>
-  <div class="menu">
-    <ul>
-      <li>Home</li>
-      <li>Groups</li>
-      <li>Network</li>
-      <li>Dashboard</li>
-    </ul>
-  </div>
-  <div id="content" class="content">
-    <div class="top-bar">
-      <button id="openMenu">≡</button>
-    </div>
-    <div class="content-wrapper">
-    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </div>
-  </div>
-<script>
-document.getElementById('openMenu').onclick = function () {
-    document.getElementById('content').classList.toggle('slide-content');
-};
-</script>
-</body>
-</html> -->

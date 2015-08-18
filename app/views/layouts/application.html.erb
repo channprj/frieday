@@ -8,59 +8,60 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-</head>
-<body>
-<!-- Fixed navbar -->
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-<!--  <button type="button" class="tracing-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle Tracing</span>
-        <i class="fa fa-clock-o"></i>
-      </button> -->
-      <a class="navbar-brand" href="<%= root_path %>">
-        <img alt="Frieday" src="<%= asset_path 'frieday.png' %>">
-      </a>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <!-- <li><%= link_to "Home", root_path %></li> -->
-        <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
-        <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '퀵 메뉴', bulletin_posts_path(2) %></li>
-        <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to '나만의 메뉴', bulletin_posts_path(3) %></li>
-        <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to '커뮤니티', bulletin_posts_path(4) %></li>
-        <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'Contact Us', bulletin_posts_path(5) %></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://119.205.252.23:3000/test/jquery.mmenu.css" />
+  <script type="text/javascript" src="http://119.205.252.23:3000/test/jquery.mmenu.min.js"></script>
+  </head>
+  <body data-no-turbolink="true">
+    <div id="page">
+      <div class="header">
+        <a href="#menu"></a>
+        Frieday Logo
+      </div>
+      <!-- Contents -->
+      <div class="content">
+        <%= render partial: "shared/flash_messages", flash: flash %>
+        <p class="notice"><%= notice %></p>
+        <!-- <p class="alert"><%= alert %></p> -->
+        <%= yield %>
+      </div><!-- END Contents -->
+      <!-- GNB -->
+      <div id="menu">
+        <ul>
+          <% if user_signed_in? %>
+          <li>
+            <a href=""><%= current_user.email %><b class="caret"></b></a>
+            <ul>
               <li><%= link_to "My Profile", edit_user_registration_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
             </ul>
           </li>
-        <% else %>
+          <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
           <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</div>
-<div class="container">
-  <%= render partial: "shared/flash_messages", flash: flash %>
-  <p class="notice"><%= notice %></p>
-  <!-- <p class="alert"><%= alert %></p> -->
-  <%= yield %>
-</div><!--/container-->
-</body>
+          <% end %>
+          <li><a href="<%= root_path %>">Home</a></li>
+          <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
+          <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '퀵 메뉴', bulletin_posts_path(2) %></li>
+          <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to '나만의 메뉴', bulletin_posts_path(3) %></li>
+          <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to '커뮤니티', bulletin_posts_path(4) %></li>
+          <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'Contact Us', bulletin_posts_path(5) %></li>
+          <li><a href="#about">About us</a>
+            <ul>
+              <li><a href="#about/history">History</a></li>
+              <li><a href="#">Team</a>
+                <ul>
+                  <li><a href="#about/team/management">Model</a></li>
+                  <li><a href="#about/team/sales">View</a></li>
+                  <li><a href="#about/team/development">Controller</a></li>
+                </ul>
+              </li>
+              <li><a href="#about/address">Server Info</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Service Info</a></li>
+        </ul>
+      </div><!-- END Menu -->
+    </div><!-- END Page -->
+  </body>
 </html>
