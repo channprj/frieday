@@ -1,90 +1,572 @@
-<body style="width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;">
-<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" style="height:auto !important; margin:0; padding:0; width:100% !important; background-color:#FFFFFF; color:#222222;">
-	<tr>
-		<td>
-         <div id="tablewrap" style="width:100% !important; max-width:600px !important; text-align:center !important; margin-top:0 !important; margin-right: auto !important; margin-bottom:0 !important; margin-left: auto !important;">
-		      <table id="contenttable" width="600" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; text-align:center !important; margin-top:0 !important; margin-right: auto !important; margin-bottom:0 !important; margin-left: auto !important; border:none; width: 100% !important; max-width:600px !important;">
-            <tr>
-                <td width="100%">
-                    <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" width="100%">
-                        <tr>
-                            <td width="100%" bgcolor="#ffffff" style="text-align:center;"><a href="#"><img src="http://postfiles13.naver.net/20150813_76/yy9356_14394703649804kn0x_JPEG/%C4%A1%C5%B24.JPG?type=w2" style="display:inline-block; max-width:100% !important; width:100% !important; height:auto !important;border-bottom-right-radius:8px;border-bottom-left-radius:8px;" border="0"></a>
-                            </td>
-                        </tr>
-                   </table>
-                   <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="25" width="100%">
-                        <tr>
-                            <td width="100%" bgcolor="#ffffff" style="text-align:left;">
-                            	<p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
-                                    반갑습니다 <%= @email %> 님!                               
-                                </p>
-                            	<p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
-
-                                    프라이데이에 가입하신것을 환영합니다!<br>
-                                    프라이데이와 함께 맛있는 치킨을 즐겨보세요~<br>
-                                    궁금하신것은
-                                     <a style="color:#2489B3; font-weight:bold; text-decoration:underline;" href="#">연락주세요!</a>!<br>
-                                </p>
-                                    <table border="0" cellspacing="0" cellpadding="0" width="100%" class="emailwrapto100pc">
-                                      <tr>
-                                        <td class="emailcolsplit" align="left" valign="top" width="58%">
-                                            <p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
-                                            <br><br>
-                                                터치!터치! <br>
-                                                이벤트와 함께 나만의 치킨을 만들수 있습니다. <br>원하는 치킨을 만들어보세요!<br>
-                                                당신만의 치킨을 기다리고 있겠습니다.<br>
-                                                커뮤니티에 올려 자랑도 해보세요 !<br>
-
-                                                                                   </p>
-                                        </td>
-                                        <td class="emailcolsplit" align="left" valign="top" width="42%" style="padding-left:17px;max-width:231px;">
-                                            <a href="#"><img src="http://cdn7.staztic.com/app/i/1602/1602302/krcobbqtopping-2130-0-s-386x470.jpg" alt="Supporting image 1" style="display:block; width:100% !important; height:auto !important;border-radius:8px;" border="0"></a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td class="emailcolsplit" align="left" valign="top" width="58%">
-                                            <p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:19px; margin-top:0; margin-bottom:20px; padding:0; font-weight:normal;">
-                                            <br><br>
-                                                주문 후 치킨 도착까지 지루하셨죠? <br>
-                                                프라이데이와 함께라면 기다리는 시간도 즐겁답니다<br>
-                                                치킨이 도착할때까지 미니게임을 해보세요!<br>
-                                                포인트를 얻으면 쿠폰도 한가득!<br>
-                                                할인, 추가, 프리 사이드메뉴까지!!!!<br>
-                                            </p>
-                                        </td>
-                                        <td class="emailcolsplit" align="left" valign="top" width="42%" style="padding-left:17px;max-width:231px;">
-                                            <a href="#"><img src="http://www.khgames.co.kr/news/photo/images/imglib16/090608_5_1.jpg" alt="Supporting image 2" style="display:block; width:100% !important; height:auto !important;border-radius:8px;" border="0"></a>
-                                        </td>
-                                      </tr>
-                                    </table>
-    
-                            </td>
-                        </tr>
-                   </table>
-                   <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" width="100%">
-                        <tr>
-                          <td width="100%" bgcolor="#ffffff" style="text-align:center;"><a style="font-weight:bold; text-decoration:none;" href="#"><div style="display:block; max-width:100% !important; width:93% !important; height:auto !important;background-color:#2489B3;padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-radius:8px;color:#ffffff;font-size:24px;font-family:Arial, Helvetica, sans-serif;">
-                          <%= link_to '프라이데이 바로가기', confirmation_url(@resource, confirmation_token: @token) %></div></a></td>
-                        </tr>
-                   </table>
-                   <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="25" width="100%">
-                        <tr>
-                            <td width="100%" bgcolor="#ffffff" style="text-align:left;">
-                            	<p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; margin-top:0; margin-bottom:15px; padding:0; font-weight:normal;">
-                                    Email not displaying correctly? <a style="color:#2489B3; font-weight:bold; text-decoration:underline;" href="#">View it in your browser.</a>
-                                </p>
-                            	<p style="color:#222222; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:14px; margin-top:0; margin-bottom:15px; padding:0; font-weight:normal;">
-                                    Copyright 2013 Your Company. All Rights Reserved.<br>
-                                    If you no longer wish to receive emails from us, you may <a style="color:#2489B3; font-weight:normal; text-decoration:underline;" href="#">unsubscribe</a>.
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
+<!-- Start of preheader -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                <tbody>
+                <!-- Spacing -->
+                <tr>
+                    <td width="100%" height="20">
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                <tr>
+                    <td width="100%" align="left" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="preheader">
+                         Can't see this Email? View it in your <a href="#" style="text-decoration: none; color: #e20404">Browser </a>
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                <tr>
+                    <td width="100%" height="20">
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
         </table>
-        </div>
-		</td>
-	</tr>
-</table> 
-</body>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of preheader -->
+<!-- Start of header -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="header">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table width="600" bgcolor="#e20404" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                <tbody>
+                <tr>
+                    <td>
+                        <!-- logo -->
+                        <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                        <tbody>
+                        <tr>
+                            <td width="140" height="50" align="center">
+                                <div class="imgpop">
+                                    <a target="_blank" href="#">
+                                    <img src="http://postfiles2.naver.net/20150818_225/hello_eun11_14398719573563DORA_PNG/Frieday_1.png?type=w3" alt="" border="0" width="140" height="50" style="display:block; border:none; outline:none; text-decoration:none;">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of logo -->
+                        <!-- start of menu -->
+                        <table bgcolor="#e20404" width="250" height="50" border="0" align="right" valign="middle" cellpadding="0" cellspacing="0" border="0" class="devicewidth">
+                        <tbody>
+                        <tr>
+                            <td height="50" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="menu">
+                                <a href="#" style="color: #ffffff;text-decoration: none;">Home</a>
+                                &nbsp;&nbsp;&nbsp; <a href="#" style="color: #ffffff;text-decoration: none;">Shop</a>
+                                &nbsp;&nbsp;&nbsp; <a href="#" style="color: #ffffff;text-decoration: none;">Contact</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of menu -->
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of Header -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+<tbody>
+<tr>
+    <td>
+        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+        <tbody>
+        <tr>
+            <td align="center" height="30" style="font-size:1px; line-height:1px;">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of seperator -->
+<!-- Start of main-banner -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="banner">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+                <tbody>
+                <tr>
+                    <!-- start of image -->
+                    <td align="center" st-image="banner-image">
+                        <div class="imgpop">
+                            <a target="_blank" href="#"><img width="600" border="0" height="300" alt="" border="0" style="display:block; border:none; outline:none; text-decoration:none;" src="http://postfiles13.naver.net/20150818_76/hello_eun11_1439871950401XiMC1_PNG/main_img1.png?type=w3" class="banner"></a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+                <!-- end of image -->
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of main-banner -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+<tbody>
+<tr>
+    <td>
+        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+        <tbody>
+        <tr>
+            <td align="center" height="30" style="font-size:1px; line-height:1px;">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of seperator -->
+<!-- Start of Left Image -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="left-image">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                <tbody>
+                <tr>
+                    <td>
+                        <!-- Start of left column -->
+                        <table width="280" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                        <tbody>
+                        <!-- image -->
+                        <tr>
+                            <td width="280" height="140" align="center" class="devicewidth">
+                                <img src="http://postfiles14.naver.net/20150818_205/hello_eun11_14398744303326sQHO_PNG/img3.png?type=w3" alt="" border="0" width="280" height="140" style="display:block; border:none; outline:none; text-decoration:none;" class="col2img">
+                            </td>
+                        </tr>
+                        <!-- /image -->
+                        </tbody>
+                        </table>
+                        <!-- end of left column -->
+                        <!-- spacing for mobile devices-->
+                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mobilespacing">
+                        <tbody>
+                        <tr>
+                            <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of for mobile devices-->
+                        <!-- start of right column -->
+                        <table width="280" align="right" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table width="280" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                <tbody>
+                                <!-- title -->
+                                <tr>
+                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">
+                                         Frieday에 오신것을 환영합니다!
+                                    </td>
+                                </tr>
+                                <!-- end of title -->
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- /Spacing -->
+                                <!-- content -->
+                                <tr>
+                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;">
+                                         반갑습니다!  <%= @email %> 님!<br/>
+                                         재미있는 치킨주문서비스 프라이데이입니다.<br/>
+                                         프라이데이와 함께<br/>
+                                         맛있는 치킨을 즐겨보세요!<br/>
+
+                                    </td>
+                                </tr>
+                                <!-- end of content -->
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- /Spacing -->
+                                <!-- read more -->
+                                <tr>
+                                    <td>
+                                        <table width="120" height="32" bgcolor="#e20404" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-radius:3px;" st-button="Learn More">
+                                        <tbody>
+                                        <tr>
+                                            <td height="9" align="center" style="font-size:1px; line-height:1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
+                                                <a style="text-decoration: none;color: #ffffff; text-align:center;" href="#">Learn More</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="9" align="center" style="font-size:1px; line-height:1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- end of read more -->
+                                </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of right column -->
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of Left Image -->
+<br />  
+
+  
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+<tbody>
+<tr>
+    <td>
+        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+        <tbody>
+        <tr>
+            <td align="center" height="30" style="font-size:1px; line-height:1px;">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of seperator -->
+<!-- start of Full text -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="full-text">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table bgcolor="#ffffff" width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                <tbody>
+                <!-- Spacing -->
+                <tr>
+                    <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                <tr>
+                    <td>
+                        <table width="560" align="center" cellpadding="0" cellspacing="0" border="0" class="devicewidthinner">
+                        <tbody>
+                        <!-- Title -->
+                        <tr>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:center; line-height: 24px;">
+                                 Frieday를 즐기는 방법!!
+                            </td>
+                        </tr>
+                        <!-- End of Title -->
+                        <!-- spacing -->
+                        <tr>
+                            <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <!-- End of spacing -->
+                        <!-- content -->
+                        <tr>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:center; line-height: 24px;">
+                                 Chapter1 : 오늘뭐먹지? 고민된다면 Random 메뉴 룰렛돌리기! <br/>
+                                 Chapter2 : 나만의 메뉴를 만들고싶다면? 주저없이 커스텀메뉴로! <br/>
+                                 Chapter3 : 나만의 메뉴를 자랑해보세요! 하트가 쌓이면 레벨업! <br/>
+                                 Chapter4 : 기다리는동안 지루함은 NO! 신나는 게임 한판! <br/>
+                                 Chapter5 : 마지막으로 각종 이벤트들을 놓치지 마세요!<br/>
+                                 <br/> 
+                            </td>
+                        </tr>
+                        <!-- End of content -->
+                        <!-- Spacing -->
+                        <tr>
+                            <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <!-- Spacing -->
+                        </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                <tr>
+                    <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                        &nbsp;
+                    </td>
+                </tr>
+                <!-- Spacing -->
+                </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of Full Text -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+<tbody>
+<tr>
+    <td>
+        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+        <tbody>
+        <tr>
+            <td align="center" height="30" style="font-size:1px; line-height:1px;">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of seperator -->
+<!-- Start of Right Image -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="right-image">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <tr>
+            <td width="100%">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                <tbody>
+                <tr>
+                    <td>
+                        <!-- Start of left column -->
+                        <table width="280" align="right" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                        <tbody>
+                        <!-- image -->
+                        <tr>
+                            <td width="280" height="140" align="center" class="devicewidth">
+                                <img src="http://postfiles3.naver.net/20150816_290/hello_eun11_1439724811691uSxMe_JPEG/img1.JPG?type=w3" alt="" border="0" width="280" height="140" style="display:block; border:none; outline:none; text-decoration:none;" class="col2img">
+                            </td>
+                        </tr>
+                        <!-- /image -->
+                        </tbody>
+                        </table>
+                        <!-- end of left column -->
+                        <!-- spacing for mobile devices-->
+                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="mobilespacing">
+                        <tbody>
+                        <tr>
+                            <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of for mobile devices-->
+                        <!-- start of right column -->
+                        <table width="280" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <table width="280" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                <tbody>
+                                <!-- title -->
+                                <tr>
+                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">
+                                        프라이데이와 함께 ,1일 1치킨 :)
+                                    </td>
+                                </tr>
+                                <!-- end of title -->
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- /Spacing -->
+                                <!-- content -->
+                                <tr>
+                                    <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;">
+                                         지금! 프라이데이와 함께 하세요!<br/>
+                                         &nbsp;&nbsp;&nbsp;↓ ↓ ↓&nbsp;CLICK!<br/>
+                                    </td>
+                                </tr>
+                                <!-- end of content -->
+                                <!-- Spacing -->
+                                <tr>
+                                    <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <!-- /Spacing -->
+                                <!-- read more -->
+                                <tr>
+                                    <td>
+                                        <table width="120" height="32" bgcolor="#e20404" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-radius:3px;" st-button="learnmore">
+                                        <tbody>
+                                        <tr>
+                                            <td height="9" align="center" style="font-size:1px; line-height:1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="14" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
+                                                <a style="text-decoration: none;color: #ffffff; text-align:center;" href="#">
+                                                <%= link_to 'GoTo Frieday', confirmation_url(@resource, confirmation_token: @token) %></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="9" align="center" style="font-size:1px; line-height:1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- end of read more -->
+                                </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- end of right column -->
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of Right Image -->
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+<tbody>
+<tr>
+    <td>
+        <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+        <tbody>
+        <tr>
+            <td align="center" height="30" style="font-size:1px; line-height:1px;">
+                &nbsp;
+            </td>
+        </tr>
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of Postfooter -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="postfooter">
+<tbody>
+<tr>
+    <td>
+        <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+        <tbody>
+        <!-- Spacing -->
+        <tr>
+            <td width="100%" height="20">
+            </td>
+        </tr>
+        <!-- Spacing -->
+        <tr>
+            <td align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="preheader">
+                 No longer want to recieve emails? <a href="#" style="text-decoration: none; color: #e20404">Unsubscribe here </a>
+            </td>
+        </tr>
+        <!-- Spacing -->
+        <tr>
+            <td width="100%" height="20">
+            </td>
+        </tr>
+        <!-- Spacing -->
+        </tbody>
+        </table>
+    </td>
+</tr>
+</tbody>
+</table>
+<!-- End of postfooter -->
