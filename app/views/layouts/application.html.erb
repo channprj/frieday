@@ -31,7 +31,7 @@
         <ul>
           <% if user_signed_in? %>
           <li>
-            <a href="#"><%= current_user.email %><b class="caret"></b></a>
+            <a href="#"><%= current_user.email %></a>
             <ul>
               <li><%= link_to "My Profile", edit_user_registration_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
