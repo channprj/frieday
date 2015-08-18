@@ -1,16 +1,94 @@
-$light-orange: #ff8c00;
-$navbar-default-color: $light-orange;
-$navbar-default-bg: red;
+/*--------------------------------------------------------------
+  Application Layout Style
+--------------------------------------------------------------*/
+$navbar-default-bg: #c52f24;
 $navbar-default-link-color: white;
 $navbar-default-link-active-color: white;
 $navbar-default-link-hover-color: white;
 $navbar-default-link-hover-bg: #cc0000;
 $gray-light: #cccccc;
 
-@import 'bootstrap';
-@import 'bootstrap/theme';
+body {
+	padding-top: 60px;
+}
+
+@import 'bootstrap-custom';
+@import 'bootstrap-overrides';
 @import 'posts';
 @import 'font-awesome';
 
+.navbar-brand > img {
+	height: 20px;
+	width: 100px;
+}
 
-body { padding-top: 60px; }
+
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #e2e2e2;
+  font-family: Arial, Helvetica, Verdana;
+  font-size: 14px;
+  line-height: 22px;
+  color: #666;
+  position: relative;
+  -webkit-text-size-adjust: none;
+}
+nav:not(.mm-menu) {
+  display: none;
+}
+
+.header, .footer {
+  text-align: center;
+}
+.header{
+  background: $navbar-default-bg;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 40px;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  width: 100%;
+  height: 40px;
+  padding: 0 50px;
+}
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.footer.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.header a.header-menu {
+  // background: center center no-repeat transparent;
+  // background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+  color: #ffffff;
+  font-size: 2.4rem;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-color: #a80000
+}
+.header a.header-alert {
+  color: #ffffff;
+  font-size: 2.4rem;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background-color: #a80000
+}

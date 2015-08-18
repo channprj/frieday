@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Frieday</title>
+  <link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/bulletins.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/posts.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/tasks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/welcome.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/bootstrap.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+
+<link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mmenu.min.js"></script>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="4CTP0ftFWoQfUVZkkdUDbxiNjoqO+ZnXQfjs0qGqRgI=" name="csrf-token" />
+
+
+<style type="text/css">
+  html, body
+  {
+    padding: 0;
+    margin: 0;
+  }
+  body
+  {
+    background-color: #fff;
+    font-family: Arial, Helvetica, Verdana;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    position: relative;
+    -webkit-text-size-adjust: none;
+  }
+  body *
+  {
+    text-shadow: none;
+  }
+  p
+  {
+    margin: 0 0 10px 0;
+  }
+  a, a:link, a:active, a:visited, a:hover
+  {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  nav:not(.mm-menu)
+  {
+    display: none;
+  }
+
+  .header,
+  .content,
+  .footer
+  {
+    text-align: center;
+  }
+  .header,
+  .footer
+  {
+    background: #222;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    width: 100%;
+    height: 40px;
+    padding: 0 50px;
+  }
+  .header.fixed
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .footer.fixed
+  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .header a
+  {
+    background: center center no-repeat transparent;
+    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .content
+  {
+    padding: 150px 50px 50px 50px;
+}
+</style>
+
+</head>
+<body>
+<div id="page">
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+
+    <div id="menu" class="navbar-header">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About us</a>
+            <ul>
+              <li><a href="#about/history">History</a></li>
+              <li><a href="#">The team</a>
+                <ul>
+                  <li><a href="#about/team/management">Management</a></li>
+                  <li><a href="#about/team/sales">Sales</a></li>
+                  <li><a href="#about/team/development">Development</a></li>
+                </ul>
+              </li>
+              <li><a href="#about/address">Our address</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+<!--  <button type="button" class="tracing-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Tracing</span>
+        <i class="fa fa-clock-o"></i>
+      </button> -->
+      <a class="navbar-brand" href="/">
+        <img alt="Frieday" src="/assets/frieday.png">
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!-- <li><a href="/">Home</a></li> -->
+        <li class=""><a href="/bulletins/1/posts">공지사항</a></li>
+        <li class=""><a href="/bulletins/2/posts">퀵 메뉴</a></li>
+        <li class=""><a href="/bulletins/3/posts">나만의 메뉴</a></li>
+        <li class=""><a href="/bulletins/4/posts">커뮤니티</a></li>
+        <li class=""><a href="/bulletins/5/posts">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_in">Sign in</a></li>
+          <li><a href="/users/sign_up">Sign up</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<div class="container">
+  
+  <p class="notice"></p>
+  <!-- <p class="alert"></p> -->
+  <h1>Frieday :)</h1>
+<a class="btn btn-default" href="/bulletins/5/posts">글작성</a>
+
+</div><!--/container-->
+</div>
+</body>
+</html>
+

@@ -22,5 +22,6 @@ config/google_analytics.yml
 # Ignore all assets files
 .DS_Store
 public/assets/**
+public/test/*
 public/uploads/*
 db/migrate/*

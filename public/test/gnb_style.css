@@ -1,0 +1,138 @@
+/*.screen{
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bar{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+*/
+body {
+  margin: 0 auto;
+}
+
+.menu{
+  position: absolute;
+  height: 100%;
+}
+
+.content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrapper{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/*COSMETIC STUFF*/
+/*.screen{
+  width: 420px;
+  height: 650px;
+  border-radius: 3px;
+  float: left;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}*/
+
+/*.screen-landscape{
+  width: 650px;
+  height: 420px;
+}*/
+
+.menu{
+  background: #222;
+  width: 240px;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+.slide-content{
+  -webkit-transform: translate(240px, 0);
+  -moz-transform: translate(240px, 0);
+  -ms-transform: translate(240px, 0);
+  -o-transform: translate(240px, 0);
+  transform: translate(240px, 0);
+}
+
+.content{
+  background-color: #CFCFCF;
+  box-shadow: 0 0 25px 3px #000;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+
+/*p{
+  margin: 10px 30px;
+}*/
+
+/*button{
+  width: 45px;
+  height: 45px;
+  color: #C6C6C6;
+  font-size: 180%;
+  text-shadow: -1px -1px 1px #5A5A5A;
+  background-image: -webkit-linear-gradient(#47738C ,#5B7F95, #3E5E71);
+  background-image: -moz-linear-gradient(#47738C ,#5B7F95, #3E5E71);
+  background-image: -ms-linear-gradient(#47738C ,#5B7F95, #3E5E71);
+  background-image: -o-linear-gradient(#47738C ,#5B7F95, #3E5E71);
+  background-image: linear-gradient(#47738C ,#5B7F95, #3E5E71);
+  border: 1px solid rgba(0,0,0,0.3);
+  margin: 3px 0 0 3px; 
+  border-radius: 5px;
+}
+
+button:active{
+  background-image: -webkit-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
+  background-image: -moz-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
+  background-image: -ms-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
+  background-image: -o-linear-gradient(#3E5E71 ,#5B7F95, #47738C);
+  background-image: linear-gradient(#3E5E71 ,#5B7F95, #47738C);
+}*/
+
+/*button:hover, button:focus{
+  box-shadow: inset 0 0 6px -2px #FFF;
+  outline: none;
+}
+
+body button{
+  width: 80px;
+}
+
+body{
+  background-color: #3C3C3C;
+}
+
+li{
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  width: 100%;
+  margin-left: -40px;
+  padding: 20px;
+  border: 1px solid #6C6C6C;
+}
+
+li:hover{
+  background: #6C6C6C;
+}*/
+
+::-webkit-scrollbar {
+    width: 0;
+}
