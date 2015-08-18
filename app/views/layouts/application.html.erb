@@ -15,8 +15,9 @@
   <body data-no-turbolink="true">
     <div id="page">
       <div class="header">
-        <a href="#menu"></a>
+        <a class="header-menu" href="#menu"><i class="fa fa-bars"></i></a>
         Frieday Logo
+        <a class="header-alert" href="#alert"><i class="fa fa-clock-o"></i></a>
       </div>
       <!-- Contents -->
       <div class="content">
@@ -26,11 +27,11 @@
         <%= yield %>
       </div><!-- END Contents -->
       <!-- GNB -->
-      <div id="menu">
+      <nav id="menu">
         <ul>
           <% if user_signed_in? %>
           <li>
-            <a href=""><%= current_user.email %><b class="caret"></b></a>
+            <a href="#"><%= current_user.email %><b class="caret"></b></a>
             <ul>
               <li><%= link_to "My Profile", edit_user_registration_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
@@ -61,7 +62,31 @@
           </li>
           <li><a href="#contact">Service Info</a></li>
         </ul>
-      </div><!-- END Menu -->
+      </nav><!-- END Menu -->
+      <nav id="alert">
+        <ul>
+          <li><a href="<%= root_path %>">Home</a></li>
+          <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
+          <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '퀵 메뉴', bulletin_posts_path(2) %></li>
+          <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to '나만의 메뉴', bulletin_posts_path(3) %></li>
+          <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to '커뮤니티', bulletin_posts_path(4) %></li>
+          <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'Contact Us', bulletin_posts_path(5) %></li>
+          <li><a href="#about">About us</a>
+            <ul>
+              <li><a href="#about/history">History</a></li>
+              <li><a href="#">Team</a>
+                <ul>
+                  <li><a href="#about/team/management">Model</a></li>
+                  <li><a href="#about/team/sales">View</a></li>
+                  <li><a href="#about/team/development">Controller</a></li>
+                </ul>
+              </li>
+              <li><a href="#about/address">Server Info</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Service Info</a></li>
+        </ul>
+      </nav><!-- END Menu -->
     </div><!-- END Page -->
   </body>
 </html>

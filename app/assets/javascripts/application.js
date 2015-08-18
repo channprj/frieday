@@ -19,8 +19,15 @@
 //= require bootstrap
 
 /* MMenu */
-  $(function() {
-    $('div#menu').mmenu({
-         extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark"]
-      });
-  });
+$(function() {
+  $('nav#menu').mmenu({
+       extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark"]
+    });
+});
+
+$(function() {
+  $('nav#alert').mmenu({
+	  	offCanvas: { position: "right" },
+	  	extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark", "tileview"]
+    });
+});
