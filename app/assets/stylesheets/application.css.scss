@@ -14,8 +14,12 @@ body {
 
 @import 'bootstrap-custom';
 @import 'bootstrap-overrides';
-@import 'posts';
 @import 'font-awesome';
+
+@import 'posts';
+@import 'comments';
+
+
 
 .navbar-brand > img {
 	height: 20px;
