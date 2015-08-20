@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :posts
+  get 'comments/create'
 
-  # 게시판에서 posts 객체를 불러옴
+  get 'comments/destroy'
+
+  # 포스트에서 코멘트를 불러온다.
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
+
+  # 게시판에서 포스트를 불러온다.
   resources :bulletins do
     resources :posts
   end
