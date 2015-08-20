@@ -20,7 +20,8 @@ $line-height: 1.5em;
 }
 
 body {
-  background: #5D5D5D;
+  height: 100%;
+  background : #E0FF8B;
   color: $color;
   font: $font-weight #{$font-size}/#{$line-height} $font-family;
   margin: 0;
@@ -113,7 +114,7 @@ input[type="submit"] { cursor: pointer; }
 }
 
 #form-inputs input[type="submit"] {
-  background: #87CE00;
+  background: #ABF200;
   border-radius: 3px;
   color: #fff;
   float: right;
