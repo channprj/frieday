@@ -1,7 +1,18 @@
-<h2>Sign up</h2>
+<link rel="stylesheet" href="http://119.205.252.23:8000/login.css" type="text/css" />
 
+
+<div class="wrap">
+<div id="form-inputs">
+
+<center>
+</br>
+<img src="http://postfiles2.naver.net/20150818_225/hello_eun11_14398719573563DORA_PNG/Frieday_1.png?type=w3" height="50" style="display:block; border:none; outline:none; text-decoration:none;">
+</center></br>
+
+<fieldset>
+<h3>Sign Up</h3>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+ <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
@@ -15,3 +26,6 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</fieldset></div></div>
+

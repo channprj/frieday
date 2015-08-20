@@ -21,7 +21,7 @@ $line-height: 1.5em;
 
 body {
   height: 100%;
-  background : #E0FF8B;
+  background : #5D5D5D;
   color: $color;
   font: $font-weight #{$font-size}/#{$line-height} $font-family;
   margin: 0;
