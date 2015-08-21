@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818113716) do
+ActiveRecord::Schema.define(version: 20150821122402) do
 
   create_table "bulletins", force: true do |t|
     t.string   "title"
@@ -20,24 +20,6 @@ ActiveRecord::Schema.define(version: 20150818113716) do
     t.datetime "updated_at"
     t.string   "post_type",   default: "bulletin"
   end
-
-  create_table "chickens", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "price"
-    t.string   "image_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "comments", force: true do |t|
-    t.integer  "post_id"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -49,11 +31,6 @@ ActiveRecord::Schema.define(version: 20150818113716) do
   end
 
   add_index "posts", ["bulletin_id"], name: "index_posts_on_bulletin_id", using: :btree
-
-  create_table "quickmenus", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "tasks", force: true do |t|
     t.string   "title"
@@ -79,16 +56,13 @@ ActiveRecord::Schema.define(version: 20150818113716) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "weekly_ranks", force: true do |t|
-    t.integer "total_orders"
-    t.integer "chicken_id"
-  end
-
-  add_index "weekly_ranks", ["chicken_id"], name: "index_weekly_ranks_on_chicken_id", using: :btree
 
 end

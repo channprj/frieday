@@ -48,6 +48,8 @@ gem 'devise'  # Flexible authentication solution. Manage and maintain account ea
 gem 'rolify'  # Role management.
 gem 'authority'  # auth management.
 gem 'letter_opener', group: :development  # lookup email on browser without sending.
+gem 'omniauth'  # OAuth.
+gem 'omniauth-facebook'  #OAuth for facebook.
 
 
 # Front-end

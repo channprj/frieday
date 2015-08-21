@@ -33,6 +33,7 @@
           <li>
             <a href="#"><%= current_user.email %></a>
             <ul>
+              <li><%= image_tag(current_user.image, size: '20x20', style:'border-radius:3px;vertical-align:top;') if current_user.image %></li>
               <li><%= link_to "My Profile", edit_user_registration_path %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
             </ul>
