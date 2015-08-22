@@ -345,16 +345,16 @@ html.mm-blocking #mm-blocker {
   display: block; }
 
 .mm-menu {
-  width: 80%;
+  width: 220px;
   min-width: 140px;
-  max-width: 440px; }
+  max-width: 220px; }
 
 html.mm-opening .mm-slideout {
-  -webkit-transform: translate(80%, 0);
-  -moz-transform: translate(80%, 0);
-  -ms-transform: translate(80%, 0);
-  -o-transform: translate(80%, 0);
-  transform: translate(80%, 0); }
+  -webkit-transform: translate(220px, 0);
+  -moz-transform: translate(220px, 0);
+  -ms-transform: translate(220px, 0);
+  -o-transform: translate(220px, 0);
+  transform: translate(220px, 0); }
 
 @media all and (max-width: 175px) {
   html.mm-opening .mm-slideout {
@@ -365,16 +365,16 @@ html.mm-opening .mm-slideout {
     transform: translate(140px, 0); } }
 @media all and (min-width: 550px) {
   html.mm-opening .mm-slideout {
-    -webkit-transform: translate(440px, 0);
-    -moz-transform: translate(440px, 0);
-    -ms-transform: translate(440px, 0);
-    -o-transform: translate(440px, 0);
-    transform: translate(440px, 0); } }
+    -webkit-transform: translate(220px, 0);
+    -moz-transform: translate(220px, 0);
+    -ms-transform: translate(220px, 0);
+    -o-transform: translate(220px, 0);
+    transform: translate(220px, 0); } }
 /*
 	jQuery.mmenu autoHeight addon CSS
 */
 .mm-menu.mm-top.mm-autoheight, .mm-menu.mm-bottom.mm-autoheight {
-  max-height: 80%; }
+  max-height: 220px; }
   .mm-menu.mm-top.mm-autoheight.mm-fullscreen, .mm-menu.mm-bottom.mm-autoheight.mm-fullscreen {
     max-height: 100%; }
 .mm-menu.mm-measureheight > .mm-panel {
@@ -1198,11 +1198,11 @@ html.mm-opened.mm-fullscreen .mm-page {
   bottom: 0; }
 
 html.mm-right.mm-opening .mm-slideout {
-  -webkit-transform: translate(-80%, 0);
-  -moz-transform: translate(-80%, 0);
-  -ms-transform: translate(-80%, 0);
-  -o-transform: translate(-80%, 0);
-  transform: translate(-80%, 0); }
+  -webkit-transform: translate(-220px, 0);
+  -moz-transform: translate(-220px, 0);
+  -ms-transform: translate(-220px, 0);
+  -o-transform: translate(-220px, 0);
+  transform: translate(-220px, 0); }
 
 @media all and (max-width: 175px) {
   html.mm-right.mm-opening .mm-slideout {
@@ -1213,11 +1213,11 @@ html.mm-right.mm-opening .mm-slideout {
     transform: translate(-140px, 0); } }
 @media all and (min-width: 550px) {
   html.mm-right.mm-opening .mm-slideout {
-    -webkit-transform: translate(-440px, 0);
-    -moz-transform: translate(-440px, 0);
-    -ms-transform: translate(-440px, 0);
-    -o-transform: translate(-440px, 0);
-    transform: translate(-440px, 0); } }
+    -webkit-transform: translate(-220px, 0);
+    -moz-transform: translate(-220px, 0);
+    -ms-transform: translate(-220px, 0);
+    -o-transform: translate(-220px, 0);
+    transform: translate(-220px, 0); } }
 /*
 	jQuery.mmenu z-position extension CSS
 */
@@ -1268,7 +1268,7 @@ html.mm-opening .mm-menu.mm-front, html.mm-opening .mm-menu.mm-next {
   transform: translate3d(0, 0, 0); }
 
 .mm-menu.mm-top, .mm-menu.mm-bottom {
-  height: 80%;
+  height: 220px;
   min-height: 140px;
   max-height: 880px; }
 
