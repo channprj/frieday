@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
+  get 'products/index'
+
   get 'comments/create'
 
   get 'comments/destroy'
@@ -19,6 +25,8 @@ Rails.application.routes.draw do
 
   resources :tasks
 
+
+ 
 
 
   # The priority is based upon order of creation: first created -> highest priority.

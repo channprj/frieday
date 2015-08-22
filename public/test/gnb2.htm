@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>jQuery.mmenu demo</title>
+
+    <link type="text/css" rel="stylesheet" href="jquery.mmenu.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.mmenu.min.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('div#menu').mmenu();
+  });
+</script>
+
+<style type="text/css">
+  html, body
+  {
+    padding: 0;
+    margin: 0;
+  }
+  body
+  {
+    background-color: #fff;
+    font-family: Arial, Helvetica, Verdana;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    position: relative;
+    -webkit-text-size-adjust: none;
+  }
+  body *
+  {
+    text-shadow: none;
+  }
+  p
+  {
+    margin: 0 0 10px 0;
+  }
+  a, a:link, a:active, a:visited, a:hover
+  {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  nav:not(.mm-menu)
+  {
+    display: none;
+  }
+
+  .header,
+  .content,
+  .footer
+  {
+    text-align: center;
+  }
+  .header,
+  .footer
+  {
+    background: #222;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    width: 100%;
+    height: 40px;
+    padding: 0 50px;
+  }
+  .header.fixed
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .footer.fixed
+  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .header a
+  {
+    background: center center no-repeat transparent;
+    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+  }
+  .content
+  {
+    padding: 150px 50px 50px 50px;
+}
+</style>
+  </head>
+  <body>
+    <div id="page">
+      <div class="header">
+        <a href="#menu"></a>
+        Frieday Logo
+      </div>
+      <div class="content">
+        <p><strong>컨텐츠</strong><br />
+          프라이데이 프라이데이</p>
+      </div>
+      <div id="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+<!--           <li><a href="#about">About us</a>
+            <ul>
+              <li><a href="#about/history">History</a></li>
+              <li><a href="#">The team</a>
+                <ul>
+                  <li><a href="#about/team/management">Management</a></li>
+                  <li><a href="#about/team/sales">Sales</a></li>
+                  <li><a href="#about/team/development">Development</a></li>
+                </ul>
+              </li>
+              <li><a href="#about/address">Our address</a></li>
+            </ul>
+          </li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
