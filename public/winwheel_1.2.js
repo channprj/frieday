@@ -58,14 +58,14 @@ var determinedGetUrl = "";  	 // Set to URL of the server-side process to load v
 // In order to work correctly the the start and end angles need to match the begining and end of the segments for the prizes in your wheel image.
 // Thinking about a clock face, 0 is at the 12 o'clock, 90 is at the 3 o'clock, 180 is 6 o'clock, 270 is 9 o'clock.
 var prizes = new Array();
-prizes[0] = {"name" : "뿌링클치킨", "startAngle" : 0,   "endAngle" : 44};  // Note how prize end angle is 1 less than start angle of next prize so no overlap.
-prizes[1] = {"name" : "Prize 2", "startAngle" : 45,  "endAngle" : 89};
-prizes[2] = {"name" : "Prize 3", "startAngle" : 90,  "endAngle" : 134};
-prizes[3] = {"name" : "Prize 4", "startAngle" : 135, "endAngle" : 179};
-prizes[4] = {"name" : "양념치킨", "startAngle" : 180, "endAngle" : 224};
-prizes[5] = {"name" : "Prize 6", "startAngle" : 225, "endAngle" : 269};
-prizes[6] = {"name" : "Prize 7", "startAngle" : 270, "endAngle" : 314};
-prizes[7] = {"name" : "Prize 8", "startAngle" : 315, "endAngle" : 360};
+prizes[0] = {"name" : "순살뿌링클", "startAngle" : 0,   "endAngle" : 44};  // Note how prize end angle is 1 less than start angle of next prize so no overlap.
+prizes[1] = {"name" : "순살파닭", "startAngle" : 45,  "endAngle" : 89};
+prizes[2] = {"name" : "순살떡강정", "startAngle" : 90,  "endAngle" : 134};
+prizes[3] = {"name" : "순살핫치킨", "startAngle" : 135, "endAngle" : 179};
+prizes[4] = {"name" : "쏘스에무쵸", "startAngle" : 180, "endAngle" : 224};
+prizes[5] = {"name" : "간장골드", "startAngle" : 225, "endAngle" : 269};
+prizes[6] = {"name" : "매운맛양념치킨", "startAngle" : 270, "endAngle" : 314};
+prizes[7] = {"name" : "맛초킹", "startAngle" : 315, "endAngle" : 360};
 
 // Idea: an idea I had for this, but not implimented, is that if you wanted some the prizes / segments in your wheel to be "winners" and some to be "loosers"
 // you could add a property to the items in the prize array stating if win/loose and then in the doSpin function code that is executed when the spinning has
@@ -358,8 +358,18 @@ function doSpin()
 				{
 					// Do something with the knowlege. For this example the user is just alerted, but you could play a sound,
 					// change the innerHTML of a div to indicate the prize etc - up to you.
-					alert("결과 " + prizes[x]['name'] + "이 걸렸습니다.!\n나온 결과대로 치킨을 주문하시겠습니까?");
-					window.open("wheelorder.html", "","_blank");
+					var retVal = confirm("결과 " + prizes[x]['name'] + "이 걸렸습니다.!\n나온 결과대로 치킨을 주문하시겠습니까?");
+					if (retVal == true)
+					{
+						winObj = window.open("shopcart.html", "","_blank");
+						return true;
+					}
+				    
+				    else 
+				    {
+				    	return false;
+				    }
+
 				}
 			}
 		}

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'random/spinner'
+
+
   resources :posts
 
   # 게시판에서 posts 객체를 불러옴
