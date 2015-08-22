@@ -1,0 +1,127 @@
+$color: #999;
+$color-bg: #eaeaea;
+
+$font-family: sans-serif;
+$font-size: 16px;
+$font-weight: 400;
+
+$line-height: 1.5em;
+
+/* ---------- GENERAL ---------- */
+
+* {
+  box-sizing: border-box;
+  
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+  
+}
+
+body {
+  height: 100%;
+  background : #5D5D5D;
+  color: $color;
+  font: $font-weight #{$font-size}/#{$line-height} $font-family;
+  margin: 0;
+}
+
+
+a {
+  color: #999;
+  text-decoration: none;
+}
+
+a:hover { color: #87CE00; }
+
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+input {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="submit"] { cursor: pointer; }
+
+
+
+.wrap {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- LOGIN-FORM ---------- */
+
+#form-inputs {
+  width: 300px;
+}
+
+
+#form-inputs fieldset {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  position: relative;
+}
+
+#form-inputs fieldset:before {
+  background-color: #fff;
+  content: "";
+  height: 8px;
+  left: 50%;
+  margin: -4px 0 0 -4px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+#form-inputs input {
+  font-size: 14px;
+}
+
+#form-inputs input[type="email"],
+#form-inputs input[type="password"] {
+  border: 1px solid #dcdcdc;
+  padding: 12px 10px;
+  width: 100%;
+}
+
+#form-inputs input[type="email"] {
+  border-radius: 3px 3px 0 0;
+}
+
+#form-inputs input[type="password"] {
+  border-top: none;
+  border-radius: 0px 0px 3px 3px;
+}
+
+#form-inputs input[type="submit"] {
+  background: #ABF200;
+  border-radius: 3px;
+  color: #fff;
+  float: right;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 12px 20px;
+}
+
+#form-inputs input[type="submit"]:hover { background: #FF0000; }
+
