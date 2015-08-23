@@ -1,6 +1,13 @@
 
 <Center>
-<h2> SideMenu</h2>
+<h2> Side Menu</h2>
 <div class="shopping-cart">
   <%= render "shopping_cart" %>
-</div></Center>
+</div>
+         
+</br></br>
+          <div class="Total">
+            <h1> Total: <%= link_to "#{current_order.order_items.size} Items in Cart ( #{number_to_currency current_order.subtotal} )", cart_path %> </h1>
+          </div>
+    
+ </Center>
