@@ -9,7 +9,7 @@
 <% end %>
 <% if @order_items.size == 0 %>
   <p class="text-center">
-    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+    </br></br><h1>쇼핑카트가 비어있습니다. </br> <%= link_to "메뉴고르기", root_path %> 로 가셔서 주문해주세요.</h1>
   </p>
 <% else %>
   <% @order_items.each do |order_item| %>

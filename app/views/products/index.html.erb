@@ -1,20 +1,25 @@
-<h3 class="text-center">Products for Sale</h3>
+
 <div class="container">
- <div class="row">
-      <div class="col-xs-6">
-        <h1><%= link_to "My Store", root_path %></h1>
+    <div class="row">
+    <center>
+<h3>Side Menu </h3></center>
+<div class="heading cf">
+
+ <div class="col-xs-6">
+        <h1><%= link_to "Quick Menu", root_path %></h1>
  </div>
         <div class="col-xs-6 text-right">
-        <h1 class="cart-text"><%= render 'welcome/cart_text' %></h1>
+        <h3 class="cart-text"><%= render 'welcome/cart_text' %></h3>
       </div>
-
 
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
+  <h2>사이드메뉴를 골라주세요</h2>
     <% @products.each do |product| %>
       <%= render "product_row", product: product, order_item: @order_item %>
     <% end %>
   </div>
-</div></div>
-
-    
+</div>
+</div>
+</div>
+</div>
