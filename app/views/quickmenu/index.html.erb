@@ -1,10 +1,8 @@
-
 <%= stylesheet_link_tag "quickmenu/main" %>
-
 
 <div class="row">
 <%= @chickens.find_each do |ck| %>
-	<div class="4u 12u(mobile)">
+	<div class="col-sm-3 col-xs-6 quickmenu-card">
 
 		<!-- Feature -->
 			<section>
@@ -14,10 +12,9 @@
 				</header>
 				<p><%= ck.description %></p>
 				<p><%= ck.price %></p>
-				<ul class="actions">
-				<li><a href="#" class="button alt">주문하기</a></li>
+				<a href="#" class="btn btn-default btn-lg">주문하기</a>
 				</ul>
-				</section>						
+				</section>					
 	</div>
 <% end %>	
 </div>

@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   resources :custom, only: [:index]
 
   resources :about, only: [:index]
+
+	get 'quickmenu' => 'quickmenu#index'
  
 
 
