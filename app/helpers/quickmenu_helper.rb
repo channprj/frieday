@@ -1,0 +1,2 @@
+module QuickmenuHelper
+end

@@ -1,0 +1,24 @@
+
+<%= stylesheet_link_tag "quickmenu/main" %>
+
+
+<div class="row">
+<%= @chickens.find_each do |ck| %>
+	<div class="4u 12u(mobile)">
+
+		<!-- Feature -->
+			<section>
+				<%= image_tag ck.image_url %>
+				<header>
+					<h3><strong><%= ck.name %></strong></h3>
+				</header>
+				<p><%= ck.description %></p>
+				<p><%= ck.price %></p>
+				<ul class="actions">
+				<li><a href="#" class="button alt">주문하기</a></li>
+				</ul>
+				</section>						
+	</div>
+<% end %>	
+</div>
+
