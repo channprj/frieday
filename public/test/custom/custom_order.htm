@@ -23,7 +23,7 @@ canvas {
   user-select: none;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
-  background:url() no-repeat center center;
+  background:url(custom_menu_img/random.gif) no-repeat center center;
   /*background-size:contain;*/
   width: 500px;
   height: 500px;
@@ -49,16 +49,16 @@ button {
 <body>
 <center>
 <h2>나만의 메뉴를 주문하세요!</h2>
-<canvas id="painter" width="500" height="500"></canvas>
+<canvas id="painter" width="500" height="500" style="border:1px solid #222;"></canvas>
 <br>
 <div id="pio">
 <h3>종류</h3>
-<button onclick="ClearAll()">순살 치킨</button>
-<button onclick="ClearAll()">뼈있는 치킨</button>
+<button onclick="chickenNoBone()">순살 치킨</button>
+<button onclick="chickenBone()">뼈있는 치킨</button>
 <h3>튀김 및 소스</h3>
-<button onclick="ClearAll()">훈제</button>
-<button onclick="ClearAll()">후라이드</button>
-<button onclick="ClearAll()">크리스피</button>
+<button onclick="smokySauce()">훈제</button>
+<button onclick="friedSauce()">후라이드</button>
+<button onclick="crispySauce()">크리스피</button>
 <button onclick="spicySauce()">양념</button>
 <button onclick="doubleSpicySauce()">매운양념</button>
 <button onclick="soySauce()">간장</button>
@@ -71,10 +71,10 @@ button {
 <br>
 <h3>사이드메뉴</h3>
 <button onclick="cocaCola()">콜라</button>
-<button onclick="ClearAll()">사이드</button>
-<button onclick="ClearAll()">치킨무</button>
-<button onclick="ClearAll()">샐러드</button>
-<button onclick="ClearAll()">추가소스</button>
+<button onclick="soda()">사이다</button>
+<button onclick="radish()">치킨무</button>
+<button onclick="salad()">샐러드</button>
+<button onclick="addixSauce()">추가소스</button>
 
 <br>
 <p>기타</p>
@@ -84,105 +84,223 @@ button {
 </center>
 
 <script>
+var chickenNoBoneCount = 0;
+var chickenBoneCount = 0;
+
+var smokySauceCount = 0;
+var friedSauceCount = 0;
+var crispySauceCount = 0;
+var spicySauceCount = 0;
+var doubleSpicySauceCount = 0;
+var soySauceCount = 0;
+
+var greenOnionCount = 0;
+var garlicCount = 0;
+var cheesePowderCount = 0;
+var riceCakeCount = 0;
+
+var cocaColaCount = 0;
+var sodaCount = 0;
+var radishCount = 0;
+var saladCount = 0;
+var addixSauceCount = 0;
+
+// Chicken
+function chickenNoBone() {
+  chickenNoBoneCount++;
+  var chicken = new Image();
+  chicken.src = 'custom_menu_img/chicken.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chicken, 0, 0, width, height);
+}
+function chickenBone() {
+  chickenBoneCount++;
+  var chicken = new Image();
+  chicken.src = 'custom_menu_img/bone.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chicken, 0, 0, width, height);
+}
 // Sause
+function smokySauce() {
+  smokySauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/smoky.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
+}
+function friedSauce() {
+  friedSauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/fried.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
+}
+function crispySauce() {
+  crispySauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/crispy.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
+}
 function spicySauce() {
-    var chickenSauce = new Image();
-    chickenSauce.src = '';
-    var c = document.getElementById('painter');
-    var context = c.getContext('2d');
-    var width = 500;
-    var height = 500;
-    context.drawImage(chickenSauce, 0, 0, width, height);
+  spicySauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/spicy.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function doubleSpicySauce() {
-    var chickenSauce = new Image();
-    chickenSauce.src = '';
-    var c = document.getElementById('painter');
-    var context = c.getContext('2d');
-    var width = 500;
-    var height = 500;
-    context.drawImage(chickenSauce, 0, 0, width, height);
+  doubleSpicySauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/hot.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function soySauce() {
-    var chickenSauce = new Image();
-    chickenSauce.src = '';
-    var c = document.getElementById('painter');
-    var context = c.getContext('2d');
-    var width = 500;
-    var height = 500;
-    context.drawImage(chickenSauce, 0, 0, width, height);
+  soySauceCount++;
+  var chickenSauce = new Image();
+  chickenSauce.src = 'custom_menu_img/smoky.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  var width = 500;
+  var height = 500;
+  context.drawImage(chickenSauce, 0, 0, width, height);
 }
 
 // Topping
 function greenOnion() {
-    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
-    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
-    can.onclick = function (evt) {
-        var x = evt.offsetX, y = evt.offsetY;
-        ctx.save();
-        var angle = Math.random()*1000;
-        ctx.translate(evt.offsetX, evt.offsetY);
-        ctx.rotate(angle * Math.PI / 180);
-        ctx.drawImage(topping, 0, 0, 100, 100);
-        ctx.restore();
-    };
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+  topping.src = 'custom_menu_img/green_onion.gif';
+  can.onclick = function (evt) {
+    greenOnionCount++;
+    ctx.save();
+    var x = evt.offsetX - topping.width/2, y = evt.offsetY - topping.height/2;
+    ctx.translate(evt.offsetX,evt.offsetY);
+    var angle = Math.random()*10000%360;
+    ctx.rotate(angle * Math.PI / 180);
+    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.restore();
+  };
 }
 function garlic() {
-    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
-    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
-    can.onclick = function (evt) {
-        var x = evt.offsetX, y = evt.offsetY;
-        ctx.save();
-        var angle = Math.random()*1000;
-        ctx.translate(evt.offsetX, evt.offsetY);
-        ctx.rotate(angle * Math.PI / 180);
-        ctx.drawImage(topping, 0, 0, 100, 100);
-        ctx.restore();
-    };
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+  topping.src = 'custom_menu_img/garlic.gif';
+  can.onclick = function (evt) {
+    garlicCount++;
+    ctx.save();
+    var x = evt.offsetX - topping.width/2, y = evt.offsetY - topping.height/2;
+    ctx.translate(evt.offsetX,evt.offsetY);
+    var angle = Math.random()*10000%360;
+    ctx.rotate(angle * Math.PI / 180);
+    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.restore();
+  };
 }
 function cheesePowder() {
-    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
-    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
-    can.onclick = function (evt) {
-        var x = evt.offsetX, y = evt.offsetY;
-        ctx.save();
-        var angle = Math.random()*1000;
-        ctx.translate(evt.offsetX, evt.offsetY);
-        ctx.rotate(angle * Math.PI / 180);
-        ctx.drawImage(topping, 0, 0, 100, 100);
-        ctx.restore();
-    };
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+  topping.src = 'custom_menu_img/cheese.gif';
+  can.onclick = function (evt) {
+    cheesePowderCount++;
+    ctx.save();
+    var x = evt.offsetX - topping.width/2, y = evt.offsetY - topping.height/2;
+    ctx.translate(evt.offsetX,evt.offsetY);
+    var angle = Math.random()*10000%360;
+    ctx.rotate(angle * Math.PI / 180);
+    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.restore();
+  };
 }
 function riceCake() {
-    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
-    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
-    can.onclick = function (evt) {
-        var x = evt.offsetX, y = evt.offsetY;
-        ctx.save();
-        var angle = Math.random()*1000;
-        ctx.translate(evt.offsetX, evt.offsetY);
-        ctx.rotate(angle * Math.PI / 180);
-        ctx.drawImage(topping, 0, 0, 100, 100);
-        ctx.restore();
-    };
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+  topping.src = 'custom_menu_img/rice_cake.gif';
+  can.onclick = function (evt) {
+    riceCakeCount++;
+    ctx.save();
+    var x = evt.offsetX - topping.width/2, y = evt.offsetY - topping.height/2;
+    ctx.translate(evt.offsetX,evt.offsetY);
+    var angle = Math.random()*10000%360;
+    ctx.rotate(angle * Math.PI / 180);
+    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.restore();
+  };
 }
 
 // Side Menu
 function cocaCola() {
-    var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
-    sideMenu.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
-    can.onclick = function (evt) {
-        var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
-        ctx.drawImage(sideMenu, x, y, sideMenu.width, sideMenu.height);
-    };
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+  sideMenu.src = 'custom_menu_img/cola.gif';
+  can.onclick = function (evt) {
+    cocaColaCount++;
+    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+  };
+}
+function soda() {
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+  sideMenu.src = 'custom_menu_img/soda.gif';
+  can.onclick = function (evt) {
+    sodaCount++;
+    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+  };
+}
+function radish() {
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+  sideMenu.src = 'custom_menu_img/radish.gif';
+  can.onclick = function (evt) {
+    radishCount++;
+    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+  };
+}
+function salad() {
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+  sideMenu.src = 'custom_menu_img/salad.gif';
+  can.onclick = function (evt) {
+    saladCount++;
+    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+  };
+}
+function addixSauce() {
+  var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+  sideMenu.src = 'custom_menu_img/sauce.gif';
+  can.onclick = function (evt) {
+    addixSauceCount++;
+    alert(addixSauceCount);
+    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+  };
 }
 
+// Clean slate. 내 머릿속도 클린 슬레이트...
 function ClearAll() {
-    var initChicken = new Image();
-    initChicken.src = 'chicken-frame.png';
-    var c = document.getElementById('painter');
-    var context = c.getContext('2d');
-    context.drawImage(initChicken, 0, 0, initChicken.width, initChicken.height);
+  var initChicken = new Image();
+  initChicken.src = 'custom_menu_img/plate.gif';
+  var c = document.getElementById('painter');
+  var context = c.getContext('2d');
+  context.drawImage(initChicken, 0, 0, initChicken.width, initChicken.height);
 }
 </script>
 </body>
