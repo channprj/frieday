@@ -2,19 +2,19 @@
 
 <div class="row">
 <%= @chickens.find_each do |ck| %>
-	<div class="col-sm-3 col-xs-6 quickmenu-card">
+	<div class="col-sm-4 col-xs-6 card-padding">
 
 		<!-- Feature -->
-			<section>
-				<%= image_tag ck.image_url %>
+			<div class="quickmenu-card">
+				<%= image_tag(ck.image_url, class: "card-image") %>
 				<header>
 					<h3><strong><%= ck.name %></strong></h3>
 				</header>
-				<p><%= ck.description %></p>
-				<p><%= ck.price %></p>
-				<a href="#" class="btn btn-default btn-lg">주문하기</a>
+				<p class="card-description"><%= ck.description %></p>
+				<p class="card-price"><%= ck.price %> 원</p>
+				<a href="#" class="btn btn-default btn-lg btn-block">주문하기</a>
 				</ul>
-				</section>					
+				</div>					
 	</div>
 <% end %>	
 </div>
