@@ -20,7 +20,7 @@ body
 /* Sets the background image for the wheel */
 td.the_wheel
 {
-	background-image: url(./wheel_back.png);
+	background-image: url(./wheel_back2.png);
 	background-position: center;
 	background-repeat: none;
 }
@@ -33,12 +33,12 @@ h1, p
 
 div.power_controls
 {
-	margin-right:70px;
+	margin-right:35px;
 }
 
 div.html5_logo
 {
-	margin-left:70px;
+	margin-left:35px;
 }
 
 /* Styles for the power selection controls */

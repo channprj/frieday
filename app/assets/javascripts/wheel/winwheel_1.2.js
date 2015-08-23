@@ -112,6 +112,8 @@ function begin()
 		wheel = new Image();
 		wheel.onload = initialDraw;		// Once the image is loaded from file this function is called to draw the image in its starting position.
 		wheel.src = wheelImageName;
+
+
 	}
 }
 
@@ -121,7 +123,7 @@ function begin()
 function initialDraw(e)
 {
 	var surfaceContext = surface.getContext('2d');
-	surfaceContext.drawImage(wheel, 0, 0);
+	surfaceContext.drawImage(wheel, 0, 0, 219, 219);
 }
 
 // ==================================================================================================================================================
@@ -256,16 +258,16 @@ function doSpin()
 	surfaceContext.save();
 	
 	// Translate to the center point of our image.
-	surfaceContext.translate(wheel.width * 0.5, wheel.height * 0.5);
+	surfaceContext.translate(219 * 0.5, 219 * 0.5);
 	
 	// Perform the rotation by the angle specified in the global variable (will be 0 the first time).
 	surfaceContext.rotate(DegToRad(currentAngle));
 	
 	// Translate back to the top left of our image.
-	surfaceContext.translate(-wheel.width * 0.5, -wheel.height * 0.5);
+	surfaceContext.translate(-219 * 0.5, -219 * 0.5);
 	
 	// Finally we draw the rotated image on the canvas.
-	surfaceContext.drawImage(wheel, 0, 0);
+	surfaceContext.drawImage(wheel, 0, 0, 219, 219);
 	
 	// And restore the context ready for the next loop.
 	surfaceContext.restore();
