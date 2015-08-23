@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :products, only: [:index]
-  resource :cart, only: [:show]
-  resources :order_items, only: [:create, :update, :destroy]
-  get 'products/index'
-
   get 'comments/create'
-
   get 'comments/destroy'
 
   # 포스트에서 코멘트를 불러온다.
@@ -25,7 +19,15 @@ Rails.application.routes.draw do
 
   resources :tasks
 
+  #장바구니 루트
+    get 'products/index'
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 
+  #리뷰 루트
+  get 'reviews/index'
+  resources :reviews
  
 
 
