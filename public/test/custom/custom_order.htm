@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CUSTOM ORDER WIP</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+
+<style>
+button {
+  margin-bottom:16px;
+  padding:8px;
+  border:0;
+}
+#pio {
+  width:80%;
+  padding:15px;
+}
+</style>
+</head>
+
+<body>
+<center>
+<h2>나만의 메뉴를 주문하세요!</h2>
+<canvas id="painter" width="500" height="400" style="background:url() no-repeat center center;background-size:contain;margin-bottom:10px"></canvas>
+<br>
+<div id="pio">
+<h3>종류</h3>
+<button onclick="ClearAll()">순살 치킨</button>
+<button onclick="ClearAll()">뼈있는 치킨</button>
+<h3>튀김 및 소스</h3>
+<button onclick="ClearAll()">훈제</button>
+<button onclick="ClearAll()">후라이드</button>
+<button onclick="ClearAll()">크리스피</button>
+<button onclick="spicySauce()">양념</button>
+<button onclick="doubleSpicySauce()">매운양념</button>
+<button onclick="soySauce()">간장</button>
+<br>
+<h3>토핑</h3>
+<button onclick="greenOnion()">시원한 파무침</button>
+<button onclick="garlic()">달콤고소 마늘</button>
+<button onclick="cheesePowder()">마약같은 치즈가루</button>
+<button onclick="riceCake()">쫀쫀한 쌀떡</button>
+<br>
+<h3>사이드메뉴</h3>
+<button onclick="cocaCola()">콜라</button>
+<button onclick="ClearAll()">사이드</button>
+<button onclick="ClearAll()">치킨무</button>
+<button onclick="ClearAll()">샐러드</button>
+<button onclick="ClearAll()">추가소스</button>
+
+<br>
+<p>기타</p>
+<button onclick="ClearAll()">초기화하기</button>
+<br>
+</div>
+</center>
+
+<script>
+// Sause
+function spicySauce() {
+    var chickenSauce = new Image();
+    chickenSauce.src = '';
+    var c = document.getElementById('painter');
+    var context = c.getContext('2d');
+    var width = 500;
+    var height = 500;
+    context.drawImage(chickenSauce, 0, 0, width, height);
+}
+function doubleSpicySauce() {
+    var chickenSauce = new Image();
+    chickenSauce.src = '';
+    var c = document.getElementById('painter');
+    var context = c.getContext('2d');
+    var width = 500;
+    var height = 500;
+    context.drawImage(chickenSauce, 0, 0, width, height);
+}
+function soySauce() {
+    var chickenSauce = new Image();
+    chickenSauce.src = '';
+    var c = document.getElementById('painter');
+    var context = c.getContext('2d');
+    var width = 500;
+    var height = 500;
+    context.drawImage(chickenSauce, 0, 0, width, height);
+}
+
+// Topping
+function greenOnion() {
+    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
+    can.onclick = function (evt) {
+        var x = evt.offsetX, y = evt.offsetY;
+        ctx.save();
+        var angle = Math.random()*1000;
+        ctx.translate(evt.offsetX, evt.offsetY);
+        ctx.rotate(angle * Math.PI / 180);
+        ctx.drawImage(topping, 0, 0, 100, 100);
+        ctx.restore();
+    };
+}
+function garlic() {
+    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
+    can.onclick = function (evt) {
+        var x = evt.offsetX, y = evt.offsetY;
+        ctx.save();
+        var angle = Math.random()*1000;
+        ctx.translate(evt.offsetX, evt.offsetY);
+        ctx.rotate(angle * Math.PI / 180);
+        ctx.drawImage(topping, 0, 0, 100, 100);
+        ctx.restore();
+    };
+}
+function cheesePowder() {
+    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
+    can.onclick = function (evt) {
+        var x = evt.offsetX, y = evt.offsetY;
+        ctx.save();
+        var angle = Math.random()*1000;
+        ctx.translate(evt.offsetX, evt.offsetY);
+        ctx.rotate(angle * Math.PI / 180);
+        ctx.drawImage(topping, 0, 0, 100, 100);
+        ctx.restore();
+    };
+}
+function riceCake() {
+    var can = document.getElementById('painter'), ctx = can.getContext('2d'), topping = new Image();
+    topping.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
+    can.onclick = function (evt) {
+        var x = evt.offsetX, y = evt.offsetY;
+        ctx.save();
+        var angle = Math.random()*1000;
+        ctx.translate(evt.offsetX, evt.offsetY);
+        ctx.rotate(angle * Math.PI / 180);
+        ctx.drawImage(topping, 0, 0, 100, 100);
+        ctx.restore();
+    };
+}
+
+// Side Menu
+function cocaCola() {
+    var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
+    sideMenu.src = 'http://www.nhnent.com/image/co/img_think_03.gif';
+    can.onclick = function (evt) {
+        var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
+        ctx.drawImage(sideMenu, x, y, sideMenu.width, sideMenu.height);
+    };
+}
+
+function ClearAll() {
+    var initChicken = new Image();
+    initChicken.src = 'chicken-frame.png';
+    var c = document.getElementById('painter');
+    var context = c.getContext('2d');
+    context.drawImage(initChicken, 0, 0, initChicken.width, initChicken.height);
+}
+</script>
+</body>
+</html>
