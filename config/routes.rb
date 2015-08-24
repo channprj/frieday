@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'random/spinner'
+
+  resources :posts
 
   get 'about/index'
 
