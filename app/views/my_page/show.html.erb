@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "mypage/show" %>
+<%= javascript_include_tag "mypage/show" %>
+
+<div class="accordion-wrap">
+	<div class="accordion">
+		<a href="#" class="active"><i class="fa fa-user"></i> Profile</a>
+		<div class="sub-nav active">
+			<div class="html about-me">
+				<div class="photo">
+					<div class="photo-overlay">
+						<span class="plus">+</span>
+					</div>
+				</div>
+				<h4>Gunhae</h4>
+				<p>Hi, It's me. I love cripy chickens.</p>
+				<div class="social-link">
+					<a class="link link-twitter" href="http://twitter.com/khadkamhn/" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a class="link link-codepen" href="http://codepen.io/khadkamhn/" target="_blank"><i class="fa fa-codepen"></i></a>
+					<a class="link link-facebook" href="http://facebook.com/khadkamhn/" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a class="link link-dribbble" href="http://dribbble.com/khadkamhn" target="_blank"><i class="fa fa-dribbble"></i></a>
+				</div>
+			</div>
+		</div>
+		<a href="#"><i class="fa fa-heart"></i> 즐겨찾기 </a>
+		<div class="sub-nav">
+			<div class="html favorite">
+				<% @chicken.each do |ck| %>
+				<%= image_tag ck.image_url %>
+				<h3><%= ck.name %></h3>
+				<p><%= ck.description %></p>
+				<a class="btn btn-default" href="#" target="_blank">주문하기</a>
+				<% end %>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>

@@ -36,6 +36,8 @@ Rails.application.routes.draw do
 
 	get 'quickmenu' => 'quickmenu#index'
  
+  get 'mypage' => 'my_page#show'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
