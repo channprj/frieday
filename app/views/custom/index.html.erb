@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>CUSTOM ORDER WIP</title>
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <style>
 html {
   font-family: '나눔고딕', NanumGothic, '나눔바른고딕', NanumBarunGothic, '맑은 고딕', Malgun Gothic, Nanum Gothic, '돋움', Dotum, Helvetica Neue, Helvetica, sans-serif;
@@ -45,8 +38,9 @@ button {
 
 <body>
 <center>
-<h2>나만의 메뉴를 주문하세요!</h2>
-<canvas id="painter" width="500" height="500"></canvas>
+<h2>나만의 메뉴를 주문하세요.</h2>
+<h4>토핑과 사이드메뉴는 버튼을 누른 후 치킨을 터치해주세요!</h4>
+<canvas id="painter" width="300" height="300"></canvas>
 <br>
 <div id="pio">
 <h3>종류</h3>
@@ -109,8 +103,8 @@ function chickenNoBone() {
   chicken.src = '/test/custom/custom_menu_img/chicken.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chicken, 0, 0, width, height);
 }
 function chickenBone() {
@@ -119,8 +113,8 @@ function chickenBone() {
   chicken.src = '/test/custom/custom_menu_img/bone.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chicken, 0, 0, width, height);
 }
 // Sause
@@ -130,8 +124,8 @@ function smokySauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/smoky.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function friedSauce() {
@@ -140,8 +134,8 @@ function friedSauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/fried.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function crispySauce() {
@@ -150,8 +144,8 @@ function crispySauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/crispy.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function spicySauce() {
@@ -160,8 +154,8 @@ function spicySauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/spicy.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function doubleSpicySauce() {
@@ -170,8 +164,8 @@ function doubleSpicySauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/hot.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 function soySauce() {
@@ -180,8 +174,8 @@ function soySauce() {
   chickenSauce.src = '/test/custom/custom_menu_img/smoky.gif';
   var c = document.getElementById('painter');
   var context = c.getContext('2d');
-  var width = 500;
-  var height = 500;
+  var width = 300;
+  var height = 300;
   context.drawImage(chickenSauce, 0, 0, width, height);
 }
 
@@ -196,7 +190,7 @@ function greenOnion() {
     ctx.translate(evt.offsetX,evt.offsetY);
     var angle = Math.random()*10000%360;
     ctx.rotate(angle * Math.PI / 180);
-    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.drawImage(topping, 0, 0, topping.width*3/5, topping.height*3/5);
     ctx.restore();
   };
 }
@@ -210,7 +204,7 @@ function garlic() {
     ctx.translate(evt.offsetX,evt.offsetY);
     var angle = Math.random()*10000%360;
     ctx.rotate(angle * Math.PI / 180);
-    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.drawImage(topping, 0, 0, topping.width*3/5, topping.height*3/5);
     ctx.restore();
   };
 }
@@ -224,7 +218,7 @@ function cheesePowder() {
     ctx.translate(evt.offsetX,evt.offsetY);
     var angle = Math.random()*10000%360;
     ctx.rotate(angle * Math.PI / 180);
-    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.drawImage(topping, 0, 0, topping.width*3/5, topping.height*3/5);
     ctx.restore();
   };
 }
@@ -238,7 +232,7 @@ function riceCake() {
     ctx.translate(evt.offsetX,evt.offsetY);
     var angle = Math.random()*10000%360;
     ctx.rotate(angle * Math.PI / 180);
-    ctx.drawImage(topping, 0, 0, topping.width, topping.height);
+    ctx.drawImage(topping, 0, 0, topping.width*3/5, topping.height*3/5);
     ctx.restore();
   };
 }
@@ -266,9 +260,11 @@ function radish() {
   var can = document.getElementById('painter'), ctx = can.getContext('2d'), sideMenu = new Image();
   sideMenu.src = '/test/custom/custom_menu_img/radish.gif';
   can.onclick = function (evt) {
+  	ctx.save();
     radishCount++;
-    var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
-    ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
+    var x = evt.offsetX - sideMenu.width/4, y = evt.offsetY - sideMenu.height/4;
+    ctx.drawImage(sideMenu, x+60, y+60, sideMenu.width/4, sideMenu.height/4);
+    ctx.restore();
   };
 }
 function salad() {
@@ -276,6 +272,7 @@ function salad() {
   sideMenu.src = '/test/custom/custom_menu_img/salad.gif';
   can.onclick = function (evt) {
     saladCount++;
+    alert("조금만 기다려주세요!");
     var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
     ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
   };
@@ -285,7 +282,7 @@ function addixSauce() {
   sideMenu.src = '/test/custom/custom_menu_img/sauce.gif';
   can.onclick = function (evt) {
     addixSauceCount++;
-    alert(addixSauceCount);
+    alert("조금만 기다려주세요!");
     var x = evt.offsetX - sideMenu.width/2, y = evt.offsetY - sideMenu.height/2;
     ctx.drawImage(sideMenu, x+sideMenu.width/4, y+sideMenu.height/4, sideMenu.width/2, sideMenu.height/2);
   };
@@ -300,5 +297,3 @@ function ClearAll() {
   context.drawImage(initChicken, 0, 0, initChicken.width, initChicken.height);
 }
 </script>
-</body>
-</html>

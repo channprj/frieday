@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :products, only: [:index]
-  resource :cart, only: [:show]
-  resources :order_items, only: [:create, :update, :destroy]
+  root 'welcome#index'
+
+  get 'custom/index'
+
   get 'products/index'
 
   get 'comments/create'
 
   get 'comments/destroy'
+
+  resources :products, only: [:index]
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
 
   # 포스트에서 코멘트를 불러온다.
   resources :posts do
@@ -21,11 +26,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'welcome#index'
-
   resources :tasks
 
-
+  resources :custom
  
 
 
