@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/CHANN/git/FriedayApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/Users/CHANN/git/FriedayApp/app/build/intermediates/pre-dexed/debug/classes-6e8d18c29cba1e55c3978cc3155c2a7a6ac0e7f0.jar" />
+    </item>
+    <item
+        jar="/Users/CHANN/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/Users/CHANN/git/FriedayApp/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-f3256c70767bed979806c1b033d8a08fd41ccb01.jar" />
+    </item>
+    <item
+        jar="/Users/CHANN/git/FriedayApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/Users/CHANN/git/FriedayApp/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-6d2df5ca428a96d4ed23fd564f2b9ec508a6611e.jar" />
+    </item>
+    <item
+        jar="/Users/CHANN/git/FriedayApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/Users/CHANN/git/FriedayApp/app/build/intermediates/pre-dexed/debug/classes-8c3ec496da2d084427588cb5a9fbdad3e23c1449.jar" />
+    </item>
+
+</items>
