@@ -2,7 +2,6 @@
 <%= stylesheet_link_tag "owl-carousel/owl.theme" %>
 <%= javascript_include_tag "owl-carousel/owl.carousel" %>
 
-<h2>치킨 시켜라 400x240 배너</h2>
 <div id="owl-main-1" class="owl-carousel">
  <div><%= link_to image_tag('banner/1_400x240.png'), root_path %></div>
  <div><%= link_to image_tag('banner/2_400x240.png'), root_path %></div>
@@ -11,14 +10,26 @@
  <div><%= link_to image_tag('banner/5_400x240.png'), root_path %></div>
  <div><%= link_to image_tag('banner/6_400x240.png'), root_path %></div>
 </div>
-
-<h2>치킨 시켜라 400x80 배너</h2>
+<p>
+<br />
+<br />
+<%= link_to image_tag('banner/1_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+<%= link_to image_tag('banner/2_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+<%= link_to image_tag('banner/3_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+</p>
 <div id="owl-main-2" class="owl-carousel">
  <div><%= link_to image_tag('banner/1_400x80.png'), root_path %></div>
- <div><%= link_to image_tag('banner/2_400x80.png'), root_path %></div>
- <div><%= link_to image_tag('banner/3_400x80.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/2_400x80.png'), about_index_path %></div>
+ <div><%= link_to image_tag('banner/3_400x80.png'), custom_index_path %></div>
  <div><%= link_to image_tag('banner/4_400x80.png'), root_path %></div>
  <div><%= link_to image_tag('banner/5_400x80.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/6_400x80.png'), root_path %></div>
 </div>
 
 <script type="text/javascript">
@@ -46,7 +57,7 @@ $("#owl-main-1").owlCarousel({
   rewindNav : true,
   scrollPerPage : false,
   //Pagination
-  pagination : false,
+  pagination : true,
   paginationNumbers: false,
   // Responsive 
   responsive: true,
@@ -90,7 +101,7 @@ $("#owl-main-2").owlCarousel({
   paginationSpeed : 800,
   rewindSpeed : 1000,
   //Autoplay
-  autoPlay : 3000,
+  autoPlay : 4000,
   stopOnHover : false,
   // Navigation
   navigation : false,
@@ -98,7 +109,7 @@ $("#owl-main-2").owlCarousel({
   rewindNav : true,
   scrollPerPage : false,
   //Pagination
-  pagination : false,
+  pagination : true,
   paginationNumbers: false,
   // Responsive 
   responsive: true,
