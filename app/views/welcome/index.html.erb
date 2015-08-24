@@ -1,4 +1,140 @@
-   <h1>Frieday :)</h1>
-<%= link_to "글작성", bulletin_posts_path(5), class:'btn btn-default' %>
+<%= stylesheet_link_tag "owl-carousel/owl.carousel" %>
+<%= stylesheet_link_tag "owl-carousel/owl.theme" %>
+<%= javascript_include_tag "owl-carousel/owl.carousel" %>
 
-    
+<div id="owl-main-1" class="owl-carousel">
+ <div><%= link_to image_tag('banner/1_400x240.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/2_400x240.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/3_400x240.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/4_400x240.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/5_400x240.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/6_400x240.png'), root_path %></div>
+</div>
+<p>
+<br />
+<br />
+<%= link_to image_tag('banner/1_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+<%= link_to image_tag('banner/2_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+<%= link_to image_tag('banner/3_400x244.png', :size => "400x244"), root_path %>
+<br />
+<br />
+</p>
+<div id="owl-main-2" class="owl-carousel">
+ <div><%= link_to image_tag('banner/1_400x80.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/2_400x80.png'), about_index_path %></div>
+ <div><%= link_to image_tag('banner/3_400x80.png'), custom_index_path %></div>
+ <div><%= link_to image_tag('banner/4_400x80.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/5_400x80.png'), root_path %></div>
+ <div><%= link_to image_tag('banner/6_400x80.png'), root_path %></div>
+</div>
+
+<script type="text/javascript">
+$("#owl-main-1").owlCarousel({
+  // Most important owl features
+  items : 1,
+  itemsCustom : false,
+  itemsDesktop : [1280,3],
+  itemsDesktopSmall : [980,3],
+  itemsTablet: [768,2],
+  itemsTabletSmall: false,
+  itemsMobile : [500,1],
+  singleItem : false,
+  itemsScaleUp : false,
+  //Basic Speeds
+  slideSpeed : 300,
+  paginationSpeed : 800,
+  rewindSpeed : 1000,
+  //Autoplay
+  autoPlay : 3000,
+  stopOnHover : false,
+  // Navigation
+  navigation : false,
+  navigationText : ["prev","next"],
+  rewindNav : true,
+  scrollPerPage : false,
+  //Pagination
+  pagination : true,
+  paginationNumbers: false,
+  // Responsive 
+  responsive: true,
+  responsiveRefreshRate : 200,
+  responsiveBaseWidth: window,
+  // CSS Styles
+  baseClass : "owl-carousel",
+  theme : "owl-theme",
+  //Lazy load
+  lazyLoad : false,
+  lazyFollow : true,
+  lazyEffect : "fade",
+  //Auto height
+  autoHeight : false,
+  //JSON 
+  jsonPath : false, 
+  jsonSuccess : false,
+  //Mouse Events
+  dragBeforeAnimFinish : true,
+  mouseDrag : true,
+  touchDrag : true,
+  //Transitions
+  transitionStyle : false,
+  // Other
+  addClassActive : false,
+})
+
+$("#owl-main-2").owlCarousel({
+  // Most important owl features
+  items : 1,
+  itemsCustom : false,
+  itemsDesktop : [1280,3],
+  itemsDesktopSmall : [980,3],
+  itemsTablet: [768,2],
+  itemsTabletSmall: false,
+  itemsMobile : [500,1],
+  singleItem : false,
+  itemsScaleUp : false,
+  //Basic Speeds
+  slideSpeed : 300,
+  paginationSpeed : 800,
+  rewindSpeed : 1000,
+  //Autoplay
+  autoPlay : 4000,
+  stopOnHover : false,
+  // Navigation
+  navigation : false,
+  navigationText : ["prev","next"],
+  rewindNav : true,
+  scrollPerPage : false,
+  //Pagination
+  pagination : true,
+  paginationNumbers: false,
+  // Responsive 
+  responsive: true,
+  responsiveRefreshRate : 200,
+  responsiveBaseWidth: window,
+  // CSS Styles
+  baseClass : "owl-carousel",
+  theme : "owl-theme",
+  //Lazy load
+  lazyLoad : false,
+  lazyFollow : true,
+  lazyEffect : "fade",
+  //Auto height
+  autoHeight : false,
+  //JSON 
+  jsonPath : false, 
+  jsonSuccess : false,
+  //Mouse Events
+  dragBeforeAnimFinish : true,
+  mouseDrag : true,
+  touchDrag : true,
+  //Transitions
+  transitionStyle : false,
+  // Other
+  addClassActive : false,
+})
+
+</script>
