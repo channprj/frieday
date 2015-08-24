@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820163541) do
+ActiveRecord::Schema.define(version: 20150824053342) do
 
   create_table "bulletins", force: true do |t|
     t.string   "title"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(version: 20150820163541) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "post_type",   default: "bulletin"
+  end
+
+  create_table "chickens", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_url"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "weekly_sales"
+  end
+
+  create_table "movies", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "movie_length"
+    t.string   "director"
+    t.string   "rating"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "order_items", force: true do |t|
@@ -67,6 +87,17 @@ ActiveRecord::Schema.define(version: 20150820163541) do
     t.string   "name"
     t.decimal  "price",      precision: 12, scale: 3
     t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_url"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "price"
+    t.string   "origin"
+    t.string   "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
