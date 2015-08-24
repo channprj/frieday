@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823195242) do
+ActiveRecord::Schema.define(version: 20150824124629) do
 
   create_table "bulletins", force: true do |t|
     t.string   "title"
@@ -84,11 +84,13 @@ ActiveRecord::Schema.define(version: 20150823195242) do
   add_index "posts", ["bulletin_id"], name: "index_posts_on_bulletin_id", using: :btree
 
   create_table "products", force: true do |t|
-    t.string   "name"
-    t.decimal  "price",      precision: 12, scale: 3
-    t.boolean  "active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "name"
+    t.integer "product_id"
+    t.text    "description"
+    t.string  "image_url"
+    t.integer "price"
+    t.integer "weekly_sales"
+    t.boolean "active"
   end
 
   create_table "reviews", force: true do |t|
