@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="robots" content="noindex">
-
-<style class="cp-pen-styles">
-html, body{
-  margin : 0px;
-  padding: 0px;
-  width : 100%;
-  height : 100%;
-  overflow: hidden;
+<style>
+#easter-egg {
+  /*funny: none;*/
 }
-
-#gameCanvas{
-  position: absolute;
+#gameCanvas {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: inline;
 }
 </style>
 </head>
 <body>
-<canvas id="gameCanvas" width="608" height="608" style="left: 127.5px; top: 5.5px;">
+<div id"easter-egg" style="width: 100%; text-align:center;">
+<canvas id="gameCanvas" width="608" height="608">
+</div>
 <script>
-
 var readyStateCheckInterval = setInterval( function() {
     if (document.readyState === "complete") {
         clearInterval(readyStateCheckInterval);
@@ -106,7 +100,7 @@ function handleUserInteraction(event){
     switch(gameState){
         case HOME: gameState = GAME;
             break;
-        case GAME : birdYSpeed = -1.4;  // flap boost
+        case GAME : birdYSpeed = -1.4;  // flap speed
             break;
         case HI_SCORE: startGame();
             break;
@@ -219,7 +213,7 @@ function updateBirdHome(){
 
 function updateBirdGame(){
     birdY = Math.round(birdY + birdYSpeed);
-    birdYSpeed += .25;  // Gravity
+    birdYSpeed += .25;  //Gravity
     if(birdY < 0){
         birdY = 0;
         birdYSpeed = 0;
@@ -259,5 +253,3 @@ function setTubeY(tube){
 }
 </script>
 </canvas>
-</body>
-</html>

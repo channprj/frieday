@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'about/index'
+
   root 'welcome#index'
 
   get 'custom/index'
@@ -28,7 +30,9 @@ Rails.application.routes.draw do
 
   resources :tasks
 
-  resources :custom
+  resources :custom, only: [:index]
+
+  resources :about, only: [:index]
  
 
 
