@@ -31,16 +31,6 @@ ActiveRecord::Schema.define(version: 20150824124629) do
     t.integer  "weekly_sales"
   end
 
-  create_table "movies", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "movie_length"
-    t.string   "director"
-    t.string   "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "order_items", force: true do |t|
     t.integer  "product_id"
     t.integer  "order_id"
@@ -91,16 +81,6 @@ ActiveRecord::Schema.define(version: 20150824124629) do
     t.integer "price"
     t.integer "weekly_sales"
     t.boolean "active"
-  end
-
-  create_table "reviews", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "price"
-    t.string   "origin"
-    t.string   "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "tasks", force: true do |t|

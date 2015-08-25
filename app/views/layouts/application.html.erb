@@ -29,6 +29,7 @@
       <!-- GNB -->
       <nav id="menu">
         <ul>
+          <li><a href="<%= root_path %>">홈</a></li>
           <% if user_signed_in? %>
           <li>
             <a href="#"><%= current_user.email %></a>
@@ -38,53 +39,25 @@
             </ul>
           </li>
           <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "로그인", new_user_session_path %></li>
+          <li><%= link_to "회원가입", new_user_registration_path %></li>
           <% end %>
-          <li><a href="<%= root_path %>">Home</a></li>
           <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
-          <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '퀵 메뉴', bulletin_posts_path(2) %></li>
-          <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to '나만의 메뉴', custom_index_path %></li>
-          <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to '커뮤니티', bulletin_posts_path(4) %></li>
-          <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'About Us', about_index_path %></li>
-          <li><a href="#about">About us Test</a>
+          <li><%= link_to '퀵 메뉴', quickmenu_path %></li>
+          <li><%= link_to '나만의 메뉴', custom_index_path %></li>
+          <li><%= link_to '커뮤니티', bulletin_posts_path(2) %></li>
+          <li><%= link_to 'About Us', about_index_path %>
             <ul>
-              <li><a href="#about/history">History</a></li>
-              <li><a href="#">Team</a>
-                <ul>
-                  <li><a href="#about/team/management">Model</a></li>
-                  <li><a href="#about/team/sales">View</a></li>
-                  <li><a href="#about/team/development">Controller</a></li>
-                </ul>
-              </li>
-              <li><a href="#about/address">Server Info</a></li>
+              <li><a href="#contact">서비스 소개</a></li>
+              <li><a href="#about/member">멤버 소개</a></li>
+              <li><a href="#about/address">찾아오시는 길</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Service Info</a></li>
         </ul>
       </nav><!-- END Menu -->
       <nav id="alert">
         <ul>
-          <li><a href="<%= root_path %>">Home</a></li>
-          <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
-          <li class="<%= params[:bulletin_id] == '2' ? 'active' : '' %>"><%= link_to '퀵 메뉴', bulletin_posts_path(2) %></li>
-          <li class="<%= params[:bulletin_id] == '3' ? 'active' : '' %>"><%= link_to '나만의 메뉴', bulletin_posts_path(3) %></li>
-          <li class="<%= params[:bulletin_id] == '4' ? 'active' : '' %>"><%= link_to '커뮤니티', bulletin_posts_path(4) %></li>
-          <li class="<%= params[:bulletin_id] == '5' ? 'active' : '' %>"><%= link_to 'Contact Us', bulletin_posts_path(5) %></li>
-          <li><a href="#about">About us</a>
-            <ul>
-              <li><a href="#about/history">History</a></li>
-              <li><a href="#">Team</a>
-                <ul>
-                  <li><a href="#about/team/management">Model</a></li>
-                  <li><a href="#about/team/sales">View</a></li>
-                  <li><a href="#about/team/development">Controller</a></li>
-                </ul>
-              </li>
-              <li><a href="#about/address">Server Info</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Service Info</a></li>
+          <li><a href="<%= root_path %>">주문이 접수되지 않았습니다.</a></li>
         </ul>
       </nav><!-- END Menu -->
     </div><!-- END Page -->

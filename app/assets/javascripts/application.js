@@ -21,13 +21,15 @@
 /* MMenu */
 $(function() {
   $('nav#menu').mmenu({
-       extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark"]
+	  	slidingSubmenus: false,
+      extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark"]
     });
 });
 
 $(function() {
   $('nav#alert').mmenu({
+	  	slidingSubmenus: false,
 	  	offCanvas: { position: "right" },
-	  	extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-dark", "tileview"]
+	  	extensions: ["effect-slide-menu", "effect-slide-listitems", "border-full", "pageshadow", "theme-light"]
     });
 });
