@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824124629) do
+ActiveRecord::Schema.define(version: 20150825024855) do
 
   create_table "bulletins", force: true do |t|
     t.string   "title"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20150824124629) do
     t.datetime "updated_at"
     t.integer  "weekly_sales"
   end
+
+  create_table "comments", force: true do |t|
+    t.integer  "post_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "order_items", force: true do |t|
     t.integer  "product_id"
