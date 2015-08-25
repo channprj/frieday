@@ -42,12 +42,13 @@
           <li><%= link_to "로그인", new_user_session_path %></li>
           <li><%= link_to "회원가입", new_user_registration_path %></li>
           <% end %>
-          <li class="<%= params[:bulletin_id] == '1' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('1') %></li>
           <li><%= link_to '퀵 메뉴', quickmenu_path %></li>
-          <li><%= link_to '나만의 메뉴', custom_index_path %></li>
+          <li><%= link_to '커스텀 메뉴', custom_index_path %></li>
+          <li><%= link_to '주문하기', products_index_path %></li>
           <li><%= link_to '커뮤니티', bulletin_posts_path(2) %></li>
           <li><%= link_to 'About Us', about_index_path %>
             <ul>
+              <li><%= link_to '공지사항', bulletin_posts_path('1') %></li>
               <li><a href="#contact">서비스 소개</a></li>
               <li><a href="#about/member">멤버 소개</a></li>
               <li><a href="#about/address">찾아오시는 길</a></li>
