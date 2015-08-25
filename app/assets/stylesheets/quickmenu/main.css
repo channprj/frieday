@@ -1,9 +1,9 @@
-.row {
-	padding-left: 19px;
-	padding-right: 19px;
+.quickmenu-row {
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
-.row .title {
+.quickmenu-row .title {
 	text-align: center;
 	color: #333;
 	border-radius: 6px;
@@ -16,6 +16,7 @@
 
 .card-image {
 	border-radius: 2px;
+
 }
 
 .quickmenu-card {
@@ -29,7 +30,7 @@
 }
 
 .card-description {
-	
+	min-height: 50px;
 }
 
 .card-price {
