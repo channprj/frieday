@@ -3,6 +3,13 @@
 	padding-right: 19px;
 }
 
+.row .title {
+	text-align: center;
+	color: #333;
+	border-radius: 6px;
+	padding: 4px;
+
+}
 .card-padding {
 	padding: 2px;
 }

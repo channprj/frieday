@@ -1,5 +1,5 @@
 class QuickmenuController < ApplicationController
 	def index
-			@chickens = Chicken.order(weekly_sales: :desc).limit(3)
+			@chickens = Product.order(weekly_sales: :desc).limit(5)
 	end
 end
