@@ -5,10 +5,10 @@ class PictureUploader < CarrierWave::Uploader::Base
   # Resize images
   include CarrierWave::MiniMagick
 
-  process :resize_to_fit => [800, 800]
+  process :resize_to_fit => [1000, 1000]
 
   version :thumb do
-    process :resize_to_fill => [200,200]
+    process :resize_to_fill => [500,500]
   end
 
   # Allow White list of files. 확장자가 대문자일 경우 테스트 필요.

@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = @bulletin.posts.all
+    @posts = @bulletin.posts.all.order(created_at: :desc)
+
   end
 
   def show
