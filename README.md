@@ -6,7 +6,9 @@
 모바일을 기준으로 개발하였습니다.<br />
 <br />
 <br />
-####[이동하기](http://119.205.252.68:3000)<br />
+![iPhone6](https://raw.githubusercontent.com/channprj/frieday/master/img/iphone_frieday.png)
+<br />
+![Nexus5](https://github.com/channprj/frieday/blob/master/img/NexusB.png?raw=true)
 <br />
 <br />
 :heart_eyes::+1::chicken:
@@ -23,3 +25,6 @@
 * Ruby version : 2.1.2p95 (2014-05-08 revision 45877)
 * Rails version : 4.1.1
 * Database : Ver 15.1 Distrib 5.5.44-MariaDB, using readline 5.2
+<br />
+<br />
+![Nexus5](https://raw.githubusercontent.com/channprj/frieday/master/img/overview.png)
